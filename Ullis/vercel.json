@@ -1,0 +1,10 @@
+{
+  "rewrites": [
+    { "source": "/quem-somos",       "destination": "/quem-somos.html" },
+    { "source": "/proteses",          "destination": "/proteses.html" },
+    { "source": "/orteses",           "destination": "/orteses.html" },
+    { "source": "/avaliacao-gratuita","destination": "/avaliacao-gratuita.html" },
+    { "source": "/blog",              "destination": "/blog.html" },
+    { "source": "/unidades",          "destination": "/unidades.html" }
+  ]
+}
