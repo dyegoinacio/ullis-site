@@ -64,6 +64,7 @@
 
   @media(max-width:1024px){.types-grid,.ind-grid{grid-template-columns:1fr 1fr}.diff-split{grid-template-columns:1fr}}
   @media(max-width:640px){.types-grid,.ind-grid{grid-template-columns:1fr}.process-item{grid-template-columns:1fr}.process-item__n{font-size:1.8rem}}
+  @media(max-width:768px){.page-hero__inner>div:last-child{display:none}}
   </style>
 </head>
 <body>
@@ -92,13 +93,18 @@
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
       <span>Órteses</span>
     </div>
-    <div class="page-hero__inner" data-r>
-      <div class="eyebrow">Nossos serviços</div>
-      <h1>Órteses que corrigem,<br><em>protegem e reabilitam</em></h1>
-      <p style="max-width:520px;margin-top:16px;font-size:1.05rem">Dispositivos ortopédicos personalizados — fabricados sob medida para o seu corpo, com tecnologia precisa e 40 anos de expertise da Ullis.</p>
-      <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
-        <a href="/avaliacao-gratuita" class="btn btn-wh">Agendar avaliação gratuita</a>
-        <a href="https://wa.me/5548999670196" class="btn btn-ghost-wh" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
+    <div class="page-hero__inner" style="max-width:100%;display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center">
+      <div data-r>
+        <div class="eyebrow">Nossos serviços</div>
+        <h1>Órteses que corrigem,<br><em>protegem e reabilitam</em></h1>
+        <p style="max-width:520px;margin-top:16px;font-size:1.05rem">Dispositivos ortopédicos personalizados — fabricados sob medida para o seu corpo, com tecnologia precisa e 40 anos de expertise da Ullis.</p>
+        <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
+          <a href="/avaliacao-gratuita" class="btn btn-wh">Agendar avaliação gratuita</a>
+          <a href="https://wa.me/5548999670196" class="btn btn-ghost-wh" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
+        </div>
+      </div>
+      <div data-r data-d="1" style="display:flex;justify-content:center;align-items:center">
+        <img src="img/ortese-carbono-ullis.png" alt="Órtese de carbono fabricada pela Ullis" style="width:100%;max-height:420px;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(0,0,0,.25))">
       </div>
     </div>
   </div>

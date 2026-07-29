@@ -57,6 +57,7 @@
 
   @media(max-width:1024px){.team-grid{grid-template-columns:1fr 1fr}.split,.split--rev{grid-template-columns:1fr;direction:ltr}}
   @media(max-width:640px){.team-grid,.values-grid{grid-template-columns:1fr}.award-big{flex-direction:column;text-align:center}}
+  @media(max-width:768px){.page-hero__inner>div:last-child{display:none}}
   </style>
 </head>
 <body>
@@ -85,10 +86,15 @@
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
       <span>Quem somos</span>
     </div>
-    <div class="page-hero__inner" data-r>
-      <div class="eyebrow">Nossa história</div>
-      <h1>40 anos colocando<br><em>histórias em movimento</em></h1>
-      <p style="max-width:560px;margin-top:16px;font-size:1.08rem">Desde 1986, a família Lisboa transforma vidas através da ortopedia técnica em Santa Catarina. O que começou com um propósito simples tornou-se a maior referência do setor no estado.</p>
+    <div class="page-hero__inner" style="max-width:100%;display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center">
+      <div data-r>
+        <div class="eyebrow">Nossa história</div>
+        <h1>40 anos colocando<br><em>histórias em movimento</em></h1>
+        <p style="max-width:560px;margin-top:16px;font-size:1.08rem">Desde 1986, a família Lisboa transforma vidas através da ortopedia técnica em Santa Catarina. O que começou com um propósito simples tornou-se a maior referência do setor no estado.</p>
+      </div>
+      <div data-r data-d="1">
+        <img src="img/Ullis-frente.png" alt="Sede da Ullis Técnica Ortopédica" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.12);object-fit:cover;aspect-ratio:4/3">
+      </div>
     </div>
   </div>
 </section>

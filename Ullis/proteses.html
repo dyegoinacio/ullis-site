@@ -17,8 +17,8 @@
   .types-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:80px}
   .type-card{border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;transition:border-color var(--tr),box-shadow var(--tr),transform var(--tr);cursor:pointer}
   .type-card:hover{border-color:var(--c);box-shadow:0 8px 32px rgba(28,130,146,.1);transform:translateY(-3px)}
-  .type-card__img{aspect-ratio:16/9;overflow:hidden;background:var(--cl)}
-  .type-card__img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .type-card__img{aspect-ratio:4/3;overflow:hidden;background:#f4f6f7}
+  .type-card__img img{width:100%;height:100%;object-fit:contain;padding:16px;transition:transform .5s ease}
   .type-card:hover .type-card__img img{transform:scale(1.04)}
   .type-card__body{padding:28px 30px}
   .type-card__num{font-family:'Prompt',sans-serif;font-size:.72rem;font-weight:700;color:var(--c);letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
