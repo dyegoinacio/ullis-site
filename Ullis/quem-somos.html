@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quem Somos | Ullis Técnica Ortopédica — 40 anos de história</title>
+  <meta name="description" content="Conheça a história da Ullis Técnica Ortopédica — fundada em 1986 pela família Lisboa, hoje com 4 unidades em SC e o maior prêmio de qualidade catarinense.">
+  <link rel="canonical" href="https://ullis.com.br/quem-somos">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,600;0,700;0,800;1,700&family=Inter:wght@400;500&family=Fraunces:ital,opsz,wght@1,9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"AboutPage","name":"Quem Somos — Ullis Técnica Ortopédica","url":"https://ullis.com.br/quem-somos","description":"A história da Ullis desde 1986","mainEntity":{"@type":"MedicalBusiness","name":"Ullis Técnica Ortopédica","foundingDate":"1986","founder":[{"@type":"Person","name":"Valter Lisboa"},{"@type":"Person","name":"Ulla Lisboa"}]}}
+  </script>
+  <style>
+  /* ── Timeline ── */
+  .timeline{display:flex;flex-direction:column;gap:0;position:relative;padding-left:32px}
+  .timeline::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--c),var(--cl))}
+  .tl-item{position:relative;padding:0 0 40px 28px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-dot{position:absolute;left:-6px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--c);border:2px solid #fff;box-shadow:0 0 0 2px var(--c)}
+  .tl-year{font-family:'Prompt',sans-serif;font-size:.78rem;font-weight:700;color:var(--c);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+  .tl-item h4{font-family:'Prompt',sans-serif;font-size:1rem;font-weight:600;margin-bottom:6px}
+  .tl-item p{font-size:.875rem}
+
+  /* ── Team ── */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .team-card{border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;transition:border-color var(--tr),box-shadow var(--tr),transform var(--tr)}
+  .team-card:hover{border-color:var(--c);box-shadow:0 8px 32px rgba(28,130,146,.1);transform:translateY(-3px)}
+  .team-card__img{aspect-ratio:3/4;background:var(--cl);overflow:hidden}
+  .team-card__img img{width:100%;height:100%;object-fit:cover;object-position:top}
+  .team-card__body{padding:22px 24px}
+  .team-card__body h3{margin-bottom:4px}
+  .team-card__role{font-size:.8rem;font-family:'Prompt',sans-serif;font-weight:600;color:var(--c);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;display:block}
+  .team-card__body p{font-size:.85rem}
+
+  /* ── Values ── */
+  .values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .value-item{padding:28px;border:1px solid var(--bd);border-radius:var(--r);transition:border-color var(--tr),background var(--tr)}
+  .value-item:hover{border-color:var(--c);background:var(--cl)}
+  .value-item__ico{font-size:1.8rem;margin-bottom:14px}
+  .value-item h4{margin-bottom:8px}
+  .value-item p{font-size:.875rem}
+
+  /* ── Awards ── */
+  .award-big{display:flex;align-items:center;gap:24px;padding:28px;background:var(--bg);border:1px solid var(--bd);border-radius:var(--rl);margin-bottom:16px}
+  .award-big:last-child{margin-bottom:0}
+  .award-big__ico{width:64px;height:64px;border-radius:16px;background:var(--cl);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0}
+  .award-big h4{margin-bottom:6px}
+  .award-big p{font-size:.875rem}
+
+  /* ── Split sections ── */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center}
+  .split--rev{direction:rtl}.split--rev>*{direction:ltr}
+  .split__img{border-radius:var(--rl);overflow:hidden;aspect-ratio:4/3;box-shadow:0 16px 48px rgba(0,0,0,.1)}
+  .split__img img{width:100%;height:100%;object-fit:cover}
+
+  @media(max-width:1024px){.team-grid{grid-template-columns:1fr 1fr}.split,.split--rev{grid-template-columns:1fr;direction:ltr}}
+  @media(max-width:640px){.team-grid,.values-grid{grid-template-columns:1fr}.award-big{flex-direction:column;text-align:center}}
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav__i">
+    <a href="/" class="logo"><img src="img/logo.svg" alt="Ullis Técnica Ortopédica" height="30"></a>
+    <div class="nav__links">
+      <a href="/">Home</a>
+      <a href="/quem-somos" class="active">Quem somos</a>
+      <a href="/proteses">Próteses</a>
+      <a href="/orteses">Órteses</a>
+      <a href="/blog">Blog</a>
+      <a href="/unidades">Unidades</a>
+    </div>
+    <div class="nav__end"><a href="/avaliacao-gratuita" class="btn btn-teal nav__cta-btn">Avaliação Gratuita</a></div>
+    <button class="burger" aria-label="Menu" id="burger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="page-hero__breadcrumb">
+      <a href="/">Home</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      <span>Quem somos</span>
+    </div>
+    <div class="page-hero__inner" data-r>
+      <div class="eyebrow">Nossa história</div>
+      <h1>40 anos colocando<br><em>histórias em movimento</em></h1>
+      <p style="max-width:560px;margin-top:16px;font-size:1.08rem">Desde 1986, a família Lisboa transforma vidas através da ortopedia técnica em Santa Catarina. O que começou com um propósito simples tornou-se a maior referência do setor no estado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HISTÓRIA SPLIT -->
+<section class="s" style="background:#fff">
+  <div class="wrap">
+    <div class="split">
+      <div data-r>
+        <div class="split__img">
+          <img src="img/Ullis-frente.png" alt="Sede da Ullis Técnica Ortopédica em Florianópolis" loading="lazy">
+        </div>
+      </div>
+      <div data-r data-d="1">
+        <div class="eyebrow">1986 — hoje</div>
+        <h2>Uma empresa que nasceu para cuidar de pessoas</h2>
+        <p style="margin:16px 0 24px">A Ullis foi fundada em 1986 por Valter e Ulla Lisboa com uma missão clara: oferecer próteses e órteses de alta qualidade para pessoas com deficiências físicas em Santa Catarina.</p>
+        <p style="margin-bottom:32px">O que começou em uma pequena clínica em Florianópolis cresceu até se tornar uma rede com 4 unidades no estado, atendendo pacientes de todas as idades com a mesma dedicação dos primeiros dias.</p>
+        <div style="display:flex;gap:24px">
+          <div>
+            <div style="font-family:'Prompt',sans-serif;font-size:2.2rem;font-weight:800;color:var(--c);line-height:1">40</div>
+            <div style="font-size:.82rem;color:var(--tm)">anos de experiência</div>
+          </div>
+          <div style="width:1px;background:var(--bd)"></div>
+          <div>
+            <div style="font-family:'Prompt',sans-serif;font-size:2.2rem;font-weight:800;color:var(--c);line-height:1">4</div>
+            <div style="font-size:.82rem;color:var(--tm)">unidades em SC</div>
+          </div>
+          <div style="width:1px;background:var(--bd)"></div>
+          <div>
+            <div style="font-family:'Prompt',sans-serif;font-size:2.2rem;font-weight:800;color:var(--c);line-height:1">5k+</div>
+            <div style="font-size:.82rem;color:var(--tm)">pacientes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="s-sm" style="background:var(--bg)">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
+      <div data-r>
+        <div class="eyebrow">Nossa trajetória</div>
+        <h2 style="margin-bottom:40px">Uma história de 40 anos em marcos</h2>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-year">1986</div>
+            <h4>Fundação da Ullis</h4>
+            <p>Valter e Ulla Lisboa abrem a primeira clínica em Florianópolis com foco em ortopedia técnica.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-year">Anos 90</div>
+            <h4>Expansão para Criciúma</h4>
+            <p>A segunda unidade chega ao sul do estado, ampliando o alcance da Ullis para pacientes de toda a região.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-year">2000s</div>
+            <h4>Prêmio Top de Marcas SC</h4>
+            <p>Primeiro reconhecimento pelo Prêmio Top de Marcas e Qualidade Catarinense — distinção que se repetiria por anos consecutivos.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-year">2010s</div>
+            <h4>Terceira geração e novos horizontes</h4>
+            <p>Davi V. Lisboa, filho dos fundadores, entra na empresa como Protesista/Ortesista, trazendo nova tecnologia e energia à clínica.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-year">2020s</div>
+            <h4>Balneário Camboriú e Joinville</h4>
+            <p>Abertura das unidades no litoral norte e no maior polo industrial de SC, completando a cobertura do estado.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-year">2026</div>
+            <h4>40 anos de histórias em movimento</h4>
+            <p>Uma celebração de quatro décadas transformando vidas com ortopedia técnica de ponta e cuidado humanizado.</p>
+          </div>
+        </div>
+      </div>
+      <div data-r data-d="1" style="position:sticky;top:80px">
+        <div style="border-radius:var(--rl);overflow:hidden;aspect-ratio:3/4;box-shadow:0 16px 48px rgba(0,0,0,.1)">
+          <img src="img/Ullis-profissional-bancada.jpg" alt="Profissional Ullis trabalhando em prótese" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="s" style="background:#fff">
+  <div class="wrap">
+    <div style="text-align:center;max-width:520px;margin:0 auto 64px" data-r>
+      <div class="eyebrow">Direção</div>
+      <h2>As pessoas por trás de cada história</h2>
+      <p style="margin-top:14px">Uma família que dedicou a vida à reabilitação ortopédica — e uma liderança que compartilha do mesmo propósito.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card" data-r>
+        <div class="team-card__img">
+          <!-- IMAGEM: Foto de Valter Lisboa — substituir -->
+          <img src="img/Valter-ullis.png" alt="Valter Lisboa, fundador da Ullis Técnica Ortopédica" loading="lazy">
+        </div>
+        <div class="team-card__body">
+          <h3>Valter Lisboa</h3>
+          <span class="team-card__role">Fundador</span>
+          <p>Idealizou a Ullis em 1986 junto com Ulla. Ao longo de 40 anos, construiu com a família uma referência em ortopedia técnica em Santa Catarina.</p>
+        </div>
+      </div>
+      <div class="team-card" data-r data-d="1">
+        <div class="team-card__img">
+          <!-- IMAGEM: Foto de Ulla Lisboa — substituir -->
+          <img src="img/Foto-ulla-ullis.png" alt="Ulla Lisboa, fundadora da Ullis Técnica Ortopédica" loading="lazy">
+        </div>
+        <div class="team-card__body">
+          <h3>Ulla Lisboa</h3>
+          <span class="team-card__role">Fundadora</span>
+          <p>Ao lado de Valter, Ulla deu nome e alma à Ullis. Seu cuidado com cada paciente moldou a cultura de acolhimento que a clínica carrega até hoje.</p>
+        </div>
+      </div>
+      <div class="team-card" data-r data-d="2">
+        <div class="team-card__img">
+          <img src="img/Foto-davi-Ullis.jpg" alt="Davi V. Lisboa, Protesista e Ortesista da Ullis" loading="lazy">
+        </div>
+        <div class="team-card__body">
+          <h3>Davi V. Lisboa</h3>
+          <span class="team-card__role">Protesista & Ortesista</span>
+          <p>Filho de Valter e Ulla, Davi cresceu dentro da Ullis e formou-se em Ortopedia Técnica para dar continuidade ao legado da família com novas tecnologias.</p>
+        </div>
+      </div>
+      <div class="team-card" data-r data-d="3">
+        <div class="team-card__img">
+          <img src="img/Foto-elias-ullis.jpg" alt="Elias Lisboa, Protesista e Sócio da Ullis Técnica Ortopédica" loading="lazy">
+        </div>
+        <div class="team-card__body">
+          <h3>Elias Lisboa</h3>
+          <span class="team-card__role">Protesista & Sócio</span>
+          <p>Também filho dos fundadores, Elias trilhou o mesmo caminho do irmão e soma expertise técnica à missão familiar de transformar vidas pela ortopedia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSÃO VISÃO VALORES -->
+<section class="s-sm" style="background:var(--bg)">
+  <div class="wrap">
+    <div style="text-align:center;max-width:480px;margin:0 auto 56px" data-r>
+      <div class="eyebrow">Nosso propósito</div>
+      <h2>O que nos move todos os dias</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-item" data-r>
+        <div class="value-item__ico">🎯</div>
+        <h4>Missão</h4>
+        <p>Oferecer uma melhor qualidade de vida através da prestação de serviços de ortopedia técnica, confeccionando órteses e próteses para pessoas com deficiências.</p>
+      </div>
+      <div class="value-item" data-r data-d="1">
+        <div class="value-item__ico">🔭</div>
+        <h4>Visão</h4>
+        <p>Ser referência nacional em tecnologia, inovação, criatividade e bom atendimento, para que as pessoas tenham um novo horizonte a cada passo.</p>
+      </div>
+      <div class="value-item" data-r data-d="2">
+        <div class="value-item__ico">💎</div>
+        <h4>Valores</h4>
+        <p>Cordialidade, respeito, honestidade e conhecimento técnico. Princípios que guiam cada atendimento desde 1986 e que nunca mudarão.</p>
+      </div>
+      <div class="value-item" data-r data-d="3">
+        <div class="value-item__ico">🤝</div>
+        <h4>Compromisso</h4>
+        <p>Muito além de fabricar e vender próteses — nosso objetivo é facilitar a reabilitação do indivíduo, tornando seu dia-a-dia mais independente e prazeroso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRÊMIOS -->
+<section class="s-sm" style="background:#fff">
+  <div class="wrap" style="max-width:800px">
+    <div style="text-align:center;margin-bottom:48px" data-r>
+      <div class="eyebrow">Reconhecimentos</div>
+      <h2>Prêmios que vêm do cuidado</h2>
+      <p style="margin-top:14px">Reconhecimentos que nos orgulham porque vêm da confiança dos pacientes, não de campanhas.</p>
+    </div>
+    <div data-r>
+      <div class="award-big">
+        <div class="award-big__ico">🏆</div>
+        <div>
+          <h4>Prêmio Top de Marcas e Qualidade Catarinense</h4>
+          <p>Conquistado por anos consecutivos, este prêmio reconhece as empresas catarinenses com melhor avaliação de qualidade de serviço — um reflexo direto da satisfação dos nossos pacientes.</p>
+        </div>
+      </div>
+      <div class="award-big">
+        <div class="award-big__ico">⭐</div>
+        <div>
+          <h4>40 anos de excelência ininterrupta</h4>
+          <p>Em 2026, a Ullis completa 40 anos sem nunca parar — crescendo, inovando e, acima de tudo, cuidando de pessoas com a mesma dedicação do primeiro dia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final">
+  <div class="cta-final__in" data-r>
+    <span class="cta-tag">Próximo passo</span>
+    <h2>Venha fazer parte desta história</h2>
+    <p>Agende sua avaliação gratuita e conheça pessoalmente a equipe que há 40 anos se dedica a transformar vidas.</p>
+    <div class="cta-final__btns">
+      <a href="/avaliacao-gratuita" class="btn btn-wh">Agendar avaliação gratuita</a>
+      <a href="https://wa.me/5548999670196" class="btn btn-ghost-wh" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__main">
+    <div><div class="footer__brand-name"><img src="img/logo.svg" alt="Ullis" height="34" style="filter:brightness(0) invert(1)"></div><p class="brand-desc">Especialistas em próteses e órteses desde 1986. Transformando vidas em SC.</p><div class="soc"><a href="https://www.instagram.com/ullistecnicaortopedica/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></div></div>
+    <div class="footer__col"><h5>Páginas</h5><ul><li><a href="/">Home</a></li><li><a href="/quem-somos">Quem somos</a></li><li><a href="/proteses">Próteses</a></li><li><a href="/orteses">Órteses</a></li><li><a href="/blog">Blog</a></li><li><a href="/avaliacao-gratuita">Avaliação Gratuita</a></li></ul></div>
+    <div class="footer__col"><h5>Unidades</h5><div class="footer__addrs"><div class="footer__addr"><strong>Florianópolis</strong><span>R. Henrique Boiteux, 153</span></div><div class="footer__addr"><strong>Criciúma</strong><span>R. Santo Antonio, 880</span></div><div class="footer__addr"><strong>Balneário Camboriú</strong><span>Av. do Estado, 1690</span></div><div class="footer__addr"><strong>Joinville</strong><span>Pedro Mayerle, 160</span></div></div></div>
+    <div class="footer__col"><h5>Contato</h5><ul><li><a href="tel:+5548999670196">(48) 99967-0196</a></li><li><a href="https://wa.me/5548999670196" target="_blank">WhatsApp</a></li></ul></div>
+  </div>
+  <div style="max-width:var(--max);margin:0 auto"><div class="footer__bar"><span>© 2024 Ullis Técnica Ortopédica</span><span>Desenvolvido com ♥ em Florianópolis</span></div></div>
+</footer>
+
+<a href="https://wa.me/5548999670196?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20gratuita." target="_blank" rel="noopener" class="wa" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Como posso te ajudar?</span>
+</a>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('up',scrollY>10),{passive:true});
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.1});
+document.querySelectorAll('[data-r]').forEach(el=>ro.observe(el));
+const burger=document.getElementById('burger');const links=document.querySelector('.nav__links');let open=false;
+burger.addEventListener('click',()=>{open=!open;links.style.cssText=open?'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:12px 16px 16px;border-bottom:1px solid #e5e7eb;gap:2px;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.08)':''});
+</script>
+</body>
+</html>

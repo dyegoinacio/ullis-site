@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Órteses Ortopédicas em SC | Ullis Técnica Ortopédica</title>
+  <meta name="description" content="Órteses personalizadas para coluna, membros inferiores, superiores e pediátricas. Fabricadas sob medida com 40 anos de experiência em Santa Catarina. Avaliação gratuita.">
+  <link rel="canonical" href="https://ullis.com.br/orteses">
+  <meta name="keywords" content="órtese ortopédica, órtese coluna, órtese membro inferior, órtese pediátrica, órtese Florianópolis, órtese SC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,600;0,700;0,800;1,700&family=Inter:wght@400;500&family=Fraunces:ital,opsz,wght@1,9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"Órteses Ortopédicas","provider":{"@type":"MedicalBusiness","name":"Ullis Técnica Ortopédica"},"serviceType":"Ortopedia Técnica","description":"Fabricação de órteses ortopédicas personalizadas para coluna, membros e uso pediátrico","areaServed":"Santa Catarina"}
+  </script>
+  <style>
+  /* Types grid */
+  .types-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:80px}
+  .type-card{border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;transition:border-color var(--tr),box-shadow var(--tr),transform var(--tr)}
+  .type-card:hover{border-color:var(--c);box-shadow:0 8px 32px rgba(28,130,146,.1);transform:translateY(-3px)}
+  .type-card__img{aspect-ratio:4/3;overflow:hidden;background:#f4f6f7}
+  .type-card__img img{width:100%;height:100%;object-fit:contain;padding:12px;transition:transform .5s ease}
+  .type-card:hover .type-card__img img{transform:scale(1.04)}
+  .type-card__body{padding:28px 30px}
+  .type-card__num{font-family:'Prompt',sans-serif;font-size:.72rem;font-weight:700;color:var(--c);letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+  .type-card__body h3{font-size:1.3rem;margin-bottom:10px}
+  .type-card__body p{font-size:.88rem;margin-bottom:18px}
+
+  /* Indicações */
+  .ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:80px}
+  .ind-card{padding:24px;border:1px solid var(--bd);border-radius:var(--r);transition:border-color var(--tr),background var(--tr)}
+  .ind-card:hover{border-color:var(--c);background:var(--cl)}
+  .ind-card__ico{font-size:1.6rem;margin-bottom:12px}
+  .ind-card h4{font-size:.95rem;margin-bottom:6px}
+  .ind-card p{font-size:.82rem}
+
+  /* Process */
+  .process-list{display:flex;flex-direction:column;gap:0}
+  .process-item{display:grid;grid-template-columns:72px 1fr;gap:24px;padding:32px 0;border-bottom:1px solid var(--bd)}
+  .process-item:last-child{border-bottom:none}
+  .process-item__n{font-family:'Prompt',sans-serif;font-size:2.8rem;font-weight:800;color:var(--cm);line-height:1;padding-top:4px}
+  .process-item h4{margin-bottom:8px}
+  .process-item p{font-size:.9rem}
+
+  /* FAQ */
+  .faq-list{display:flex;flex-direction:column;gap:0}
+  .faq-item{border-bottom:1px solid var(--bd)}
+  .faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0;cursor:pointer;font-family:'Prompt',sans-serif;font-size:.98rem;font-weight:600;color:var(--t);transition:color var(--tr)}
+  .faq-q:hover{color:var(--c)}
+  .faq-icon{width:22px;height:22px;flex-shrink:0;color:var(--c);transition:transform .3s}
+  .faq-a{font-size:.9rem;line-height:1.75;color:var(--tm);padding-bottom:20px;display:none}
+  .faq-item.open .faq-a{display:block}
+  .faq-item.open .faq-icon{transform:rotate(45deg)}
+
+  /* Diferencial split */
+  .diff-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;margin-bottom:80px}
+  .diff-img{border-radius:var(--rl);overflow:hidden;aspect-ratio:4/3;box-shadow:0 16px 48px rgba(0,0,0,.1)}
+  .diff-img img{width:100%;height:100%;object-fit:cover}
+  .diff-list{display:flex;flex-direction:column;gap:16px;margin:24px 0 32px}
+  .diff-li{display:flex;align-items:flex-start;gap:12px}
+  .diff-li__dot{width:20px;height:20px;border-radius:50%;background:var(--cl);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+  .diff-li__dot::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--c)}
+  .diff-li p{font-size:.9rem;margin:0}
+
+  @media(max-width:1024px){.types-grid,.ind-grid{grid-template-columns:1fr 1fr}.diff-split{grid-template-columns:1fr}}
+  @media(max-width:640px){.types-grid,.ind-grid{grid-template-columns:1fr}.process-item{grid-template-columns:1fr}.process-item__n{font-size:1.8rem}}
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav__i">
+    <a href="/" class="logo"><img src="img/logo.svg" alt="Ullis Técnica Ortopédica" height="30"></a>
+    <div class="nav__links">
+      <a href="/">Home</a>
+      <a href="/quem-somos">Quem somos</a>
+      <a href="/proteses">Próteses</a>
+      <a href="/orteses" class="active">Órteses</a>
+      <a href="/blog">Blog</a>
+      <a href="/unidades">Unidades</a>
+    </div>
+    <div class="nav__end"><a href="/avaliacao-gratuita" class="btn btn-teal nav__cta-btn">Avaliação Gratuita</a></div>
+    <button class="burger" aria-label="Menu" id="burger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero page-hero--teal">
+  <div class="wrap">
+    <div class="page-hero__breadcrumb">
+      <a href="/" style="color:rgba(255,255,255,.6)">Home</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      <span>Órteses</span>
+    </div>
+    <div class="page-hero__inner" data-r>
+      <div class="eyebrow">Nossos serviços</div>
+      <h1>Órteses que corrigem,<br><em>protegem e reabilitam</em></h1>
+      <p style="max-width:520px;margin-top:16px;font-size:1.05rem">Dispositivos ortopédicos personalizados — fabricados sob medida para o seu corpo, com tecnologia precisa e 40 anos de expertise da Ullis.</p>
+      <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
+        <a href="/avaliacao-gratuita" class="btn btn-wh">Agendar avaliação gratuita</a>
+        <a href="https://wa.me/5548999670196" class="btn btn-ghost-wh" target="_blank" rel="noopener">Tirar dúvidas no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE É UMA ÓRTESE -->
+<section class="s" style="background:#fff">
+  <div class="wrap">
+    <div class="diff-split">
+      <div data-r>
+        <div class="diff-img">
+          <!-- IMAGEM: profissional ajustando órtese — substituir -->
+          <img src="img/ortese-carbono-ullis.png" alt="Órtese de carbono fabricada pela Ullis Técnica Ortopédica" loading="lazy">
+        </div>
+      </div>
+      <div data-r data-d="1">
+        <div class="eyebrow">O que é uma órtese</div>
+        <h2>Dispositivos que trabalham junto com o seu corpo</h2>
+        <p style="margin:16px 0 8px">Órteses são dispositivos externos aplicados ao corpo com objetivos terapêuticos: corrigir deformidades, estabilizar articulações, aliviar dores ou apoiar a recuperação de lesões.</p>
+        <p style="margin-bottom:16px">Diferente das próteses — que substituem um membro ausente — as órteses complementam e potencializam o que já existe, ajudando o corpo a funcionar melhor.</p>
+        <div class="diff-list">
+          <div class="diff-li"><div class="diff-li__dot"></div><p>Correção de postura e deformidades estruturais</p></div>
+          <div class="diff-li"><div class="diff-li__dot"></div><p>Estabilização e proteção de articulações</p></div>
+          <div class="diff-li"><div class="diff-li__dot"></div><p>Suporte à reabilitação pós-cirúrgica</p></div>
+          <div class="diff-li"><div class="diff-li__dot"></div><p>Redução de dor e melhora da função</p></div>
+          <div class="diff-li"><div class="diff-li__dot"></div><p>Desenvolvimento saudável em crianças</p></div>
+        </div>
+        <a href="/avaliacao-gratuita" class="btn btn-teal">Agendar avaliação gratuita</a>
+      </div>
+    </div>
+
+    <!-- TIPOS -->
+    <div style="margin-bottom:56px" data-r>
+      <div class="eyebrow">Tipos de órteses</div>
+      <h2>Uma solução para cada condição</h2>
+      <p style="max-width:520px;margin-top:12px">Atendemos crianças e adultos com as mais diversas necessidades ortopédicas, sempre com fabricação 100% personalizada.</p>
+    </div>
+    <div class="types-grid">
+      <div class="type-card" data-r>
+        <div class="type-card__img">
+          <!-- IMAGEM: órtese de coluna — substituir -->
+          <img src="img/ullis-ortese-coluna.png" alt="Órtese de coluna fabricada pela Ullis" loading="lazy">
+        </div>
+        <div class="type-card__body">
+          <div class="type-card__num">Tipo 01</div>
+          <h3>Órteses de Coluna</h3>
+          <p>Indicadas para escoliose, cifose, hiperlordose e pós-operatório vertebral. Fabricadas com materiais leves e respiráveis que garantem suporte sem comprometer a mobilidade.</p>
+          <div class="tags">
+            <span class="tag">Escoliose</span>
+            <span class="tag">Cifose</span>
+            <span class="tag">Pós-cirúrgica</span>
+            <span class="tag">Lombar</span>
+          </div>
+        </div>
+      </div>
+      <div class="type-card" data-r data-d="1">
+        <div class="type-card__img">
+          <!-- IMAGEM: órtese de membro inferior — substituir -->
+          <img src="img/Ullis-ortese-inferior-adulto.jpg" alt="Órtese de membro inferior da Ullis Técnica Ortopédica" loading="lazy">
+        </div>
+        <div class="type-card__body">
+          <div class="type-card__num">Tipo 02</div>
+          <h3>Membro Inferior (MMII)</h3>
+          <p>Órteses de tornozelo (AFO), joelho (KAFO), quadril e pé para tratamento de paralisia, equino, pé torto congênito, drop foot e outras condições neuromusculares.</p>
+          <div class="tags">
+            <span class="tag">AFO</span>
+            <span class="tag">KAFO</span>
+            <span class="tag">Drop Foot</span>
+            <span class="tag">Pé equino</span>
+          </div>
+        </div>
+      </div>
+      <div class="type-card" data-r data-d="2">
+        <div class="type-card__img">
+          <!-- IMAGEM: órtese de membro superior — substituir -->
+          <img src="img/ortese-membro-superior.jpg" alt="Órtese de membro superior da Ullis" loading="lazy">
+        </div>
+        <div class="type-card__body">
+          <div class="type-card__num">Tipo 03</div>
+          <h3>Membro Superior (MMSS)</h3>
+          <p>Órteses de punho, cotovelo e ombro para tratamento de lesões, reabilitação neurológica e suporte funcional — com foco em manter a função da mão e braço.</p>
+          <div class="tags">
+            <span class="tag">Punho</span>
+            <span class="tag">Cotovelo</span>
+            <span class="tag">Neurológica</span>
+          </div>
+        </div>
+      </div>
+      <div class="type-card" data-r data-d="3">
+        <div class="type-card__img">
+          <!-- IMAGEM: órtese pediátrica — substituir -->
+          <img src="img/ullis-ortese-infantil.jpg" alt="Órtese pediátrica infantil da Ullis" loading="lazy">
+        </div>
+        <div class="type-card__body">
+          <div class="type-card__num">Tipo 04</div>
+          <h3>Pediátrica</h3>
+          <p>Desenvolvidas especialmente para crianças, com materiais seguros, leves e em cores vibrantes. Acompanham o crescimento com ajustes periódicos para resultados ideais.</p>
+          <div class="tags">
+            <span class="tag">Infantil</span>
+            <span class="tag">Desenvolvimento</span>
+            <span class="tag">Pé torto</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDICAÇÕES -->
+<section class="s-sm" style="background:var(--bg)">
+  <div class="wrap">
+    <div style="text-align:center;max-width:520px;margin:0 auto 48px" data-r>
+      <div class="eyebrow">Quando indicar</div>
+      <h2>Condições que tratamos com órteses</h2>
+      <p style="margin-top:12px">As órteses são indicadas para uma ampla variedade de condições ortopédicas e neurológicas.</p>
+    </div>
+    <div class="ind-grid">
+      <div class="ind-card" data-r><div class="ind-card__ico">🦴</div><h4>Escoliose</h4><p>Desvio lateral da coluna — a órtese atua na correção progressiva durante o crescimento.</p></div>
+      <div class="ind-card" data-r data-d="1"><div class="ind-card__ico">🦶</div><h4>Pé torto congênito</h4><p>Deformidade presente ao nascimento, tratada desde os primeiros meses de vida.</p></div>
+      <div class="ind-card" data-r data-d="2"><div class="ind-card__ico">⚡</div><h4>Paralisia cerebral</h4><p>Órteses de membro inferior para posicionamento, marcha e prevenção de deformidades.</p></div>
+      <div class="ind-card" data-r><div class="ind-card__ico">🧠</div><h4>AVC e hemiplegia</h4><p>Suporte para recuperação funcional dos membros após acidente vascular cerebral.</p></div>
+      <div class="ind-card" data-r data-d="1"><div class="ind-card__ico">🏃</div><h4>Lesões esportivas</h4><p>Proteção e estabilização de joelho, tornozelo e punho durante a reabilitação.</p></div>
+      <div class="ind-card" data-r data-d="2"><div class="ind-card__ico">🔧</div><h4>Pós-operatório</h4><p>Suporte estrutural para recuperação segura após cirurgias ortopédicas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="s-sm" style="background:#fff">
+  <div class="wrap" style="max-width:760px">
+    <div style="margin-bottom:48px" data-r>
+      <div class="eyebrow">Como funciona</div>
+      <h2>Do diagnóstico à entrega</h2>
+      <p style="margin-top:12px">Um processo técnico e cuidadoso para garantir que sua órtese funcione exatamente como precisa.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-item" data-r>
+        <div class="process-item__n">01</div>
+        <div>
+          <h4>Avaliação e diagnóstico</h4>
+          <p>Nosso especialista analisa a condição ortopédica, revisa laudos médicos e discute os objetivos do tratamento — tudo de forma gratuita e sem compromisso.</p>
+        </div>
+      </div>
+      <div class="process-item" data-r>
+        <div class="process-item__n">02</div>
+        <div>
+          <h4>Moldagem e medição</h4>
+          <p>Realizamos a moldagem precisa da região a ser tratada para garantir um encaixe perfeito e confortável — sem folgas nem pressões indevidas.</p>
+        </div>
+      </div>
+      <div class="process-item" data-r>
+        <div class="process-item__n">03</div>
+        <div>
+          <h4>Fabricação personalizada</h4>
+          <p>A órtese é fabricada artesanalmente a partir do molde, com materiais selecionados para cada tipo de condição — termoformáveis, fibra de carbono, polipropileno e outros.</p>
+        </div>
+      </div>
+      <div class="process-item" data-r>
+        <div class="process-item__n">04</div>
+        <div>
+          <h4>Prova, ajuste e entrega</h4>
+          <p>Antes da entrega, o paciente experimenta a órtese e realizamos todos os ajustes necessários. A entrega só acontece quando o resultado está perfeito.</p>
+        </div>
+      </div>
+      <div class="process-item" data-r>
+        <div class="process-item__n">05</div>
+        <div>
+          <h4>Acompanhamento e revisões</h4>
+          <p>Revisamos periodicamente a órtese para garantir que continua funcionando corretamente — especialmente em crianças em fase de crescimento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="s-sm" style="background:var(--bg)">
+  <div class="wrap" style="max-width:720px">
+    <div style="margin-bottom:48px" data-r>
+      <div class="eyebrow">Dúvidas frequentes</div>
+      <h2>Perguntas sobre órteses</h2>
+    </div>
+    <div class="faq-list" data-r>
+      <div class="faq-item">
+        <div class="faq-q">Qual a diferença entre órtese e prótese?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="faq-a">A prótese substitui um membro ausente (após amputação, por exemplo). A órtese é um dispositivo externo que complementa um membro existente — corrigindo postura, estabilizando articulações ou apoiando a recuperação. Ambas são fabricadas sob medida na Ullis.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Preciso de receita médica para fazer uma órtese?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="faq-a">Para a avaliação inicial, não é necessário. Porém, para a cobertura pelo plano de saúde ou SUS, é necessária a prescrição médica. Nossa equipe orienta sobre toda a documentação necessária.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Meu plano de saúde cobre órteses?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="faq-a">A maioria dos planos de saúde e o SUS cobrem órteses ortopédicas mediante prescrição médica. Auxiliamos com toda a documentação necessária para a solicitação. Consulte-nos para entender como funciona no seu caso específico.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Quanto tempo a criança precisa usar a órtese?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="faq-a">Depende da condição e da resposta ao tratamento. Em casos como escoliose, o uso pode durar anos — geralmente até o final do crescimento ósseo. Em lesões e pós-operatórios, pode ser de semanas a meses. O médico e nosso especialista definem juntos o protocolo ideal.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">A órtese é desconfortável?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+        <div class="faq-a">Uma órtese bem fabricada e ajustada não deve causar desconforto significativo. As primeiras semanas podem exigir adaptação, mas qualquer dor ou pressão excessiva é sinal de que ajustes são necessários — e estamos sempre disponíveis para isso.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-final">
+  <div class="cta-final__in" data-r>
+    <span class="cta-tag">Dê o próximo passo</span>
+    <h2>Comece com uma avaliação gratuita</h2>
+    <p>Nosso especialista analisa seu caso, tira todas as dúvidas e indica a órtese ideal — sem custo e sem compromisso.</p>
+    <div class="cta-final__btns">
+      <a href="/avaliacao-gratuita" class="btn btn-wh">Agendar avaliação gratuita</a>
+      <a href="https://wa.me/5548999670196" class="btn btn-ghost-wh" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__main">
+    <div><div class="footer__brand-name"><img src="img/logo.svg" alt="Ullis" height="34" style="filter:brightness(0) invert(1)"></div><p class="brand-desc">Especialistas em próteses e órteses desde 1986. Transformando vidas em SC.</p><div class="soc"><a href="https://www.instagram.com/ullistecnicaortopedica/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></div></div>
+    <div class="footer__col"><h5>Páginas</h5><ul><li><a href="/">Home</a></li><li><a href="/quem-somos">Quem somos</a></li><li><a href="/proteses">Próteses</a></li><li><a href="/orteses">Órteses</a></li><li><a href="/blog">Blog</a></li><li><a href="/avaliacao-gratuita">Avaliação Gratuita</a></li></ul></div>
+    <div class="footer__col"><h5>Unidades</h5><div class="footer__addrs"><div class="footer__addr"><strong>Florianópolis</strong><span>R. Henrique Boiteux, 153</span></div><div class="footer__addr"><strong>Criciúma</strong><span>R. Santo Antonio, 880</span></div><div class="footer__addr"><strong>Balneário Camboriú</strong><span>Av. do Estado, 1690</span></div><div class="footer__addr"><strong>Joinville</strong><span>Pedro Mayerle, 160</span></div></div></div>
+    <div class="footer__col"><h5>Contato</h5><ul><li><a href="tel:+5548999670196">(48) 99967-0196</a></li><li><a href="https://wa.me/5548999670196" target="_blank">WhatsApp</a></li></ul></div>
+  </div>
+  <div style="max-width:var(--max);margin:0 auto"><div class="footer__bar"><span>© 2024 Ullis Técnica Ortopédica</span><span>Desenvolvido com ♥ em Florianópolis</span></div></div>
+</footer>
+
+<a href="https://wa.me/5548999670196?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20órteses." target="_blank" rel="noopener" class="wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span>Como posso te ajudar?</span></a>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('up',scrollY>10),{passive:true});
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.1});
+document.querySelectorAll('[data-r]').forEach(el=>ro.observe(el));
+const burger=document.getElementById('burger');const links=document.querySelector('.nav__links');let open=false;
+burger.addEventListener('click',()=>{open=!open;links.style.cssText=open?'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:12px 16px 16px;border-bottom:1px solid #e5e7eb;gap:2px;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.08)':''});
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
+</script>
+</body>
+</html>

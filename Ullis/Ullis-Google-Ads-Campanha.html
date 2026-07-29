@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ullis — Campanha Google Ads</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;font-size:14px;color:#1c1c1c;background:#f5f7f9;line-height:1.6}
+  a{color:#1C8292;text-decoration:none}
+  h1{font-size:1.5rem;color:#1C8292;border-bottom:3px solid #FBAE32;padding-bottom:8px;margin-bottom:20px}
+  h2{font-size:1.1rem;color:#184e56;margin:28px 0 10px;display:flex;align-items:center;gap:8px}
+  h2 span.badge{background:#1C8292;color:#fff;font-size:.7rem;padding:2px 8px;border-radius:20px;font-weight:600;white-space:nowrap}
+  h3{font-size:.85rem;font-weight:700;color:#505b6c;text-transform:uppercase;letter-spacing:.08em;margin:18px 0 6px}
+  .page{max-width:960px;margin:0 auto;padding:32px 20px}
+
+  /* NAV */
+  .nav{background:#184e56;color:#fff;padding:14px 20px;position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+  .nav strong{font-size:1rem;margin-right:8px;color:#FBAE32}
+  .nav a{color:rgba(255,255,255,.8);font-size:.8rem;padding:4px 10px;border-radius:4px;transition:background .2s}
+  .nav a:hover{background:rgba(255,255,255,.15);color:#fff}
+
+  /* CARDS */
+  .card{background:#fff;border-radius:10px;border:1px solid #e2e8ed;padding:24px;margin-bottom:16px}
+  .card-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+  /* TABLE */
+  table{width:100%;border-collapse:collapse;font-size:.85rem;margin:10px 0}
+  th{background:#1C8292;color:#fff;padding:8px 12px;text-align:left;font-weight:600}
+  td{padding:7px 12px;border-bottom:1px solid #eee}
+  tr:nth-child(even) td{background:#f9fbfc}
+  tr:last-child td{border-bottom:none}
+
+  /* KEYWORDS */
+  .kw-list{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+  .kw{padding:3px 10px;border-radius:4px;font-size:.82rem;font-family:monospace;font-weight:600}
+  .kw.exact{background:#e8f4f6;color:#184e56;border:1px solid #1C8292}
+  .kw.phrase{background:#fff8e8;color:#8a6000;border:1px solid #FBAE32}
+  .kw.broad{background:#f0f0f0;color:#505b6c;border:1px solid #ccc}
+
+  /* HEADLINES */
+  .hl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px;margin:8px 0}
+  .hl{background:#f0f8fa;border:1px solid #c5e0e5;border-radius:6px;padding:6px 10px;font-size:.82rem}
+  .hl .cnt{font-size:.7rem;color:#888;float:right}
+  .hl.warn{border-color:#e59e06;background:#fffbe8}
+
+  /* DESCRIPTIONS */
+  .desc{background:#f9f9f9;border-left:3px solid #1C8292;padding:8px 12px;margin:4px 0;border-radius:0 6px 6px 0;font-size:.85rem}
+  .desc .cnt{font-size:.7rem;color:#888;margin-left:6px}
+
+  /* LEGEND */
+  .legend{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;font-size:.8rem}
+  .legend span{display:flex;align-items:center;gap:4px}
+  .dot{width:10px;height:10px;border-radius:2px}
+
+  /* NEGATIVE */
+  .neg{display:inline-block;background:#fde8e8;color:#b00;border:1px solid #f5c0c0;border-radius:4px;padding:2px 8px;font-size:.8rem;margin:3px}
+
+  /* URL */
+  .url{background:#f0f8fa;border-radius:6px;padding:8px 12px;font-family:monospace;font-size:.8rem;color:#1C8292;word-break:break-all;margin:6px 0}
+
+  /* SETTINGS */
+  .setting{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee;font-size:.88rem}
+  .setting:last-child{border-bottom:none}
+  .setting .key{color:#505b6c;font-weight:600}
+  .setting .val{color:#1c1c1c;text-align:right}
+
+  /* EXTENSION */
+  .ext-item{background:#f9fbfc;border:1px solid #e2e8ed;border-radius:6px;padding:10px 14px;margin:6px 0;font-size:.85rem}
+  .ext-item strong{color:#184e56}
+
+  /* PRIORITY */
+  .pri-high{color:#1C8292;font-weight:700}
+  .pri-med{color:#FBAE32;font-weight:600}
+  .pri-low{color:#aaa}
+
+  /* SECTION */
+  section{margin-bottom:36px}
+
+  @media(max-width:640px){
+    .card-grid{grid-template-columns:1fr}
+    .hl-grid{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <strong>🎯 Ullis — Google Ads</strong>
+  <a href="#config">Configurações</a>
+  <a href="#extensoes">Extensões</a>
+  <a href="#negativos">Negativos</a>
+  <a href="#grupos">Grupos</a>
+  <a href="#recomendacoes">Recomendações</a>
+</div>
+
+<div class="page">
+
+  <div style="margin-bottom:28px">
+    <div style="font-size:.8rem;color:#888;margin-bottom:4px">ULLIS TÉCNICA ORTOPÉDICA</div>
+    <h1>Campanha Google Ads — Search</h1>
+    <p style="color:#505b6c">Estrutura completa: 12 grupos de anúncios · Palavras-chave · Anúncios RSA · Extensões<br>
+    Orçamento: R$50–100/dia · Meta: Leads via WhatsApp · Cobertura: Santa Catarina</p>
+  </div>
+
+  <!-- ─── CONFIGURAÇÕES ──────────────────── -->
+  <section id="config">
+    <h1>1. Configurações Gerais</h1>
+    <div class="card">
+      <div class="setting"><span class="key">Nome da campanha</span><span class="val">ULLIS — Search — WhatsApp — SC</span></div>
+      <div class="setting"><span class="key">Tipo</span><span class="val">Pesquisa (Search)</span></div>
+      <div class="setting"><span class="key">Objetivo</span><span class="val">Leads — Cliques para WhatsApp</span></div>
+      <div class="setting"><span class="key">Orçamento diário</span><span class="val">R$ 75,00 (faixa R$50–100)</span></div>
+      <div class="setting"><span class="key">Lance inicial (1–30 dias)</span><span class="val">Maximizar cliques · CPC máx R$8,00</span></div>
+      <div class="setting"><span class="key">Lance avançado (após 30 conv.)</span><span class="val">CPA alvo</span></div>
+      <div class="setting"><span class="key">Local</span><span class="val">Santa Catarina — todo o estado</span></div>
+      <div class="setting"><span class="key">Idioma</span><span class="val">Português (Brasil)</span></div>
+      <div class="setting"><span class="key">Redes</span><span class="val">Somente Rede de Pesquisa (desmarcar Display)</span></div>
+      <div class="setting"><span class="key">Rotação de anúncios</span><span class="val">Otimizar: anúncios de melhor desempenho</span></div>
+      <div class="setting"><span class="key">Agendamento</span><span class="val">Seg–Sex 7h–20h | Sáb 8h–14h</span></div>
+      <div class="setting"><span class="key">Conversão a rastrear</span><span class="val">Clique no botão WhatsApp (via Google Tag Manager)</span></div>
+    </div>
+
+    <h3>URL de Destino (WhatsApp)</h3>
+    <div class="url">https://wa.me/5548XXXXXXXX?text=Olá!%20Vi%20o%20anúncio%20da%20Ullis%20e%20gostaria%20de%20agendar%20uma%20avaliação%20gratuita.</div>
+    <p style="font-size:.82rem;color:#666;margin-top:6px">⚠️ Substitua XXXXXXXX pelo número real. Encurte com bit.ly e adicione UTMs: <code>?utm_source=google&utm_medium=cpc&utm_campaign=ullis-sc&utm_content={adgroupid}</code></p>
+  </section>
+
+  <!-- ─── EXTENSÕES ──────────────────────── -->
+  <section id="extensoes">
+    <h1>2. Extensões de Anúncio</h1>
+
+    <h3>Sitelinks</h3>
+    <table>
+      <tr><th>Título (25 car.)</th><th>Descrição</th><th>URL</th></tr>
+      <tr><td><strong>Avaliação Gratuita</strong></td><td>Agende sem compromisso</td><td>/avaliacao-gratuita</td></tr>
+      <tr><td><strong>Próteses</strong></td><td>MI, MS, Esportiva, Infantil</td><td>/proteses</td></tr>
+      <tr><td><strong>Órteses</strong></td><td>Coluna, MI, MS, Pediátrica</td><td>/orteses</td></tr>
+      <tr><td><strong>Nossas Unidades</strong></td><td>4 clínicas em SC</td><td>/unidades</td></tr>
+      <tr><td><strong>Quem Somos</strong></td><td>40 anos de história</td><td>/quem-somos</td></tr>
+    </table>
+
+    <h3 style="margin-top:16px">Callouts (Frases de destaque)</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin:8px 0">
+      <span class="neg" style="background:#e8f4f6;color:#184e56;border-color:#1C8292">✓ Avaliação 100% Gratuita</span>
+      <span class="neg" style="background:#e8f4f6;color:#184e56;border-color:#1C8292">✓ Fabricação Própria</span>
+      <span class="neg" style="background:#e8f4f6;color:#184e56;border-color:#1C8292">✓ 40 Anos de Experiência</span>
+      <span class="neg" style="background:#e8f4f6;color:#184e56;border-color:#1C8292">✓ 4 Unidades em SC</span>
+      <span class="neg" style="background:#e8f4f6;color:#184e56;border-color:#1C8292">✓ Atendemos Planos de Saúde</span>
+      <span class="neg" style="background:#e8f4f6;color:#184e56;border-color:#1C8292">✓ Atendimento Humanizado</span>
+      <span class="neg" style="background:#e8f4f6;color:#184e56;border-color:#1C8292">✓ Empresa Familiar SC</span>
+    </div>
+
+    <h3 style="margin-top:16px">Snippets Estruturados</h3>
+    <div class="ext-item"><strong>Cabeçalho:</strong> Serviços<br><strong>Valores:</strong> Próteses MI · Próteses MS · Próteses Esportivas · Próteses Infantis · Órteses Coluna · Órteses MI · Órteses MS · Órteses Pediátricas</div>
+
+    <h3 style="margin-top:16px">Extensão de Chamada</h3>
+    <div class="ext-item"><strong>Número:</strong> (48) XXXX-XXXX · <strong>Horário:</strong> Seg–Sex 7h–20h | Sáb 8h–14h</div>
+  </section>
+
+  <!-- ─── NEGATIVOS ──────────────────────── -->
+  <section id="negativos">
+    <h1>3. Palavras-chave Negativas (Campanha)</h1>
+    <p style="font-size:.85rem;color:#666;margin-bottom:12px">Adicione estas negativas para evitar impressões e cliques irrelevantes:</p>
+    <table>
+      <tr><th>Negativa</th><th>Motivo</th></tr>
+      <tr><td><span class="neg">grátis</span> <span class="neg">de graça</span></td><td>Pessoas buscando produtos gratuitos</td></tr>
+      <tr><td><span class="neg">curso</span> <span class="neg">escola</span> <span class="neg">faculdade</span> <span class="neg">formação</span></td><td>Buscas educacionais</td></tr>
+      <tr><td><span class="neg">emprego</span> <span class="neg">vaga</span> <span class="neg">salário</span> <span class="neg">trabalho</span></td><td>Buscas de emprego</td></tr>
+      <tr><td><span class="neg">usado</span> <span class="neg">segunda mão</span> <span class="neg">seminovo</span></td><td>Não vendemos produtos usados</td></tr>
+      <tr><td><span class="neg">animal</span> <span class="neg">pet</span> <span class="neg">veterinário</span> <span class="neg">cachorro</span></td><td>Ortopedia animal</td></tr>
+      <tr><td><span class="neg">dentário</span> <span class="neg">dente</span> <span class="neg">aparelho dental</span></td><td>Ortopedia dental</td></tr>
+      <tr><td><span class="neg">o que é</span> <span class="neg">wikipedia</span> <span class="neg">como funciona</span></td><td>Pesquisa informacional sem intenção de compra</td></tr>
+      <tr><td><span class="neg">palco</span> <span class="neg">teatro</span> <span class="neg">show</span></td><td>Confusão com outros usos da palavra "órtese/prótese"</td></tr>
+    </table>
+  </section>
+
+  <!-- ─── GRUPOS ─────────────────────────── -->
+  <section id="grupos">
+    <h1>4. Grupos de Anúncios (12 grupos)</h1>
+    <div class="legend">
+      <span><span class="dot" style="background:#e8f4f6;border:1px solid #1C8292"></span> [Exata]</span>
+      <span><span class="dot" style="background:#fff8e8;border:1px solid #FBAE32"></span> "Frase"</span>
+      <span><span class="dot" style="background:#f0f0f0;border:1px solid #ccc"></span> Ampla</span>
+    </div>
+
+    <!-- G01 -->
+    <div class="card">
+      <h2>Grupo 01 — Marca <span class="badge">MARCA</span></h2>
+
+      <h3>Palavras-chave</h3>
+      <div class="kw-list">
+        <span class="kw exact">[ullis]</span>
+        <span class="kw exact">[ullis técnica ortopédica]</span>
+        <span class="kw phrase">"ullis ortopedia"</span>
+        <span class="kw phrase">"ullis florianópolis"</span>
+        <span class="kw phrase">"clínica ullis"</span>
+      </div>
+
+      <h3>Títulos RSA</h3>
+      <div class="hl-grid">
+        <div class="hl">Ullis Técnica Ortopédica <span class="cnt">24</span></div>
+        <div class="hl">Site Oficial da Ullis <span class="cnt">21</span></div>
+        <div class="hl">40 Anos Transformando Vidas <span class="cnt">26</span></div>
+        <div class="hl">Avaliação Gratuita na Ullis <span class="cnt">27</span></div>
+        <div class="hl">Próteses e Órteses Sob Medida <span class="cnt">29</span></div>
+        <div class="hl">Fale com a Ullis pelo WhatsApp <span class="cnt">30</span></div>
+        <div class="hl">4 Unidades em Santa Catarina <span class="cnt">28</span></div>
+        <div class="hl">Desde 1986 em Ortopedia <span class="cnt">23</span></div>
+        <div class="hl">Referência em SC <span class="cnt">16</span></div>
+      </div>
+
+      <h3>Descrições RSA</h3>
+      <div class="desc">A Ullis é referência em próteses e órteses sob medida há 40 anos. Avaliação gratuita pelo WhatsApp! <span class="cnt">(96 ⚠️ encurte)</span></div>
+      <div class="desc">Atendemos em 4 unidades em Santa Catarina. Tecnologia, cuidado e experiência para cada paciente. <span class="cnt">(96 ⚠️ encurte)</span></div>
+      <div class="desc">Próteses e órteses personalizadas com tecnologia de ponta. Fale conosco agora pelo WhatsApp! <span class="cnt">(93 ⚠️ encurte)</span></div>
+      <div class="desc">Equipe especializada há 40 anos. Agende sua avaliação gratuita. Clique e fale pelo WhatsApp. <span class="cnt">(93 ⚠️ encurte)</span></div>
+      <p style="font-size:.75rem;color:#e59e06;margin-top:6px">⚠️ Ajuste o tamanho no Google Ads — limite exato é 90 caracteres. Use a ferramenta de preview para validar.</p>
+    </div>
+
+    <!-- G02 -->
+    <div class="card">
+      <h2>Grupo 02 — Próteses Geral <span class="badge">PRÓTESES</span></h2>
+      <h3>Palavras-chave</h3>
+      <div class="kw-list">
+        <span class="kw exact">[prótese ortopédica]</span>
+        <span class="kw exact">[prótese sob medida]</span>
+        <span class="kw phrase">"fazer prótese ortopédica"</span>
+        <span class="kw phrase">"clínica de prótese SC"</span>
+        <span class="kw phrase">"protesista santa catarina"</span>
+        <span class="kw broad">fabricar prótese ortopédica</span>
+        <span class="kw broad">clínica ortopédica prótese SC</span>
+      </div>
+      <h3>Títulos RSA</h3>
+      <div class="hl-grid">
+        <div class="hl">Próteses Sob Medida em SC <span class="cnt">25</span></div>
+        <div class="hl">Prótese de Alta Tecnologia <span class="cnt">26</span></div>
+        <div class="hl">Referência em Próteses SC <span class="cnt">24</span></div>
+        <div class="hl">Avaliação 100% Gratuita <span class="cnt">23</span></div>
+        <div class="hl">Fale pelo WhatsApp Agora <span class="cnt">24</span></div>
+        <div class="hl">40 Anos em Ortopedia Técnica <span class="cnt">28</span></div>
+        <div class="hl">Fabricamos Sua Prótese <span class="cnt">22</span></div>
+        <div class="hl">Ullis Técnica Ortopédica <span class="cnt">24</span></div>
+        <div class="hl">Cuidado Artesanal e Tecnologia <span class="cnt">30</span></div>
+        <div class="hl">Desde 1986 Fazendo Próteses <span class="cnt">27</span></div>
+        <div class="hl">Agende Sua Avaliação Grátis <span class="cnt">27</span></div>
+        <div class="hl">4 Clínicas em Santa Catarina <span class="cnt">28</span></div>
+      </div>
+      <h3>Descrições RSA</h3>
+      <div class="desc">Próteses personalizadas para membros inferiores, superiores e esportivas. Avaliação gratuita em SC.</div>
+      <div class="desc">Fabricamos próteses sob medida com tecnologia de ponta e cuidado artesanal. Fale pelo WhatsApp!</div>
+      <div class="desc">Há 40 anos transformando vidas em SC. Agende sua avaliação gratuita e dê o próximo passo.</div>
+      <div class="desc">Atendemos pelo plano de saúde. Equipe especializada em próteses ortopédicas desde 1986.</div>
+    </div>
+
+    <!-- G03 -->
+    <div class="card">
+      <h2>Grupo 03 — Prótese Membro Inferior <span class="badge">PRÓTESES</span></h2>
+      <h3>Palavras-chave</h3>
+      <div class="kw-list">
+        <span class="kw exact">[prótese membro inferior]</span>
+        <span class="kw exact">[prótese de perna]</span>
+        <span class="kw exact">[prótese transtibial]</span>
+        <span class="kw exact">[prótese transfemoral]</span>
+        <span class="kw phrase">"prótese para amputado perna"</span>
+        <span class="kw phrase">"prótese joelho ortopédica"</span>
+        <span class="kw phrase">"prótese abaixo do joelho"</span>
+        <span class="kw broad">amputado membro inferior prótese SC</span>
+      </div>
+      <h3>Títulos RSA</h3>
+      <div class="hl-grid">
+        <div class="hl">Prótese Membro Inferior SC <span class="cnt">25</span></div>
+        <div class="hl">Prótese de Perna Sob Medida <span class="cnt">27</span></div>
+        <div class="hl">Transtibial e Transfemoral <span class="cnt">25</span></div>
+        <div class="hl">Avaliação 100% Gratuita <span class="cnt">23</span></div>
+        <div class="hl">Recupere Sua Mobilidade <span class="cnt">23</span></div>
+        <div class="hl">Ullis: 40 Anos em Próteses <span class="cnt">25</span></div>
+        <div class="hl">Tecnologia em Prótese de MI <span class="cnt">26</span></div>
+        <div class="hl">Fale pelo WhatsApp Agora <span class="cnt">24</span></div>
+        <div class="hl">Fabricamos Sua Prótese de MI <span class="cnt">28</span></div>
+        <div class="hl">Agende Sua Avaliação Grátis <span class="cnt">27</span></div>
+      </div>
+      <h3>Descrições RSA</h3>
+      <div class="desc">Fabricamos próteses de membro inferior transtibiais e transfemorais sob medida em SC.</div>
+      <div class="desc">Tecnologia de ponta em próteses de perna. Avaliação gratuita. Fale conosco pelo WhatsApp!</div>
+      <div class="desc">Recupere sua mobilidade com a prótese certa. 40 anos de expertise em ortopedia técnica em SC.</div>
+      <div class="desc">Atendemos amputados de MI com próteses personalizadas. Avaliação gratuita sem compromisso.</div>
+    </div>
+
+    <!-- G04 -->
+    <div class="card">
+      <h2>Grupo 04 — Prótese Membro Superior <span class="badge">PRÓTESES</span></h2>
+      <h3>Palavras-chave</h3>
+      <div class="kw-list">
+        <span class="kw exact">[prótese membro superior]</span>
+        <span class="kw exact">[prótese de braço]</span>
+        <span class="kw exact">[prótese transradial]</span>
+        <span class="kw exact">[prótese transumeral]</span>
+        <span class="kw phrase">"prótese de mão ortopédica"</span>
+        <span class="kw phrase">"prótese para amputado braço"</span>
+        <span class="kw broad">amputado membro superior prótese SC</span>
+      </div>
+      <h3>Títulos RSA</h3>
+      <div class="hl-grid">
+        <div class="hl">Prótese Membro Superior SC <span class="cnt">25</span></div>
+        <div class="hl">Prótese de Braço Sob Medida <span class="cnt">27</span></div>
+        <div class="hl">Transradial e Transumeral <span class="cnt">24</span></div>
+        <div class="hl">Avaliação 100% Gratuita <span class="cnt">23</span></div>
+        <div class="hl">Recupere Suas Funções <span class="cnt">21</span></div>
+        <div class="hl">Ullis: 40 Anos em Próteses <span class="cnt">25</span></div>
+        <div class="hl">Fale pelo WhatsApp Agora <span class="cnt">24</span></div>
+        <div class="hl">Fabricamos Próteses de MS <span class="cnt">25</span></div>
+        <div class="hl">Agende Sua Avaliação Grátis <span class="cnt">27</span></div>
+      </div>
+      <h3>Descrições RSA</h3>
+      <div class="desc">Próteses de membro superior transradiais e transumerais personalizadas. Avaliação gratuita em SC.</div>
+      <div class="desc">Fabricamos próteses de braço e mão sob medida em SC. Fale conosco agora pelo WhatsApp!</div>
+      <div class="desc">Recupere suas funções com a prótese certa para seu corpo. 40 anos de experiência em SC.</div>
+      <div class="desc">Atendemos amputados de MS com próteses de alta tecnologia. Avaliação 100% gratuita.</div>
+    </div>
+
+    <!-- G05 -->
+    <div class="card">
+      <h2>Grupo 05 — Prótese Esportiva <span class="badge">PRÓTESES</span></h2>
+      <h3>Palavras-chave</h3>
+      <div class="kw-list">
+        <span class="kw exact">[prótese esportiva]</span>
+        <span class="kw phrase">"prótese para corrida"</span>
+        <span class="kw phrase">"lâmina de carbono prótese"</span>
+        <span class="kw phrase">"prótese atleta amputado"</span>
+        <span class="kw broad">prótese running corrida SC</span>
+        <span class="kw broad">prótese esporte amputado</span>
+      </div>
+      <h3>Títulos RSA</h3>
+      <div class="hl-grid">
+        <div class="hl">Prótese Esportiva em SC <span class="cnt">22</span></div>
+        <div class="hl">Lâmina de Carbono Sob Medida <span class="cnt">28</span></div>
+        <div class="hl">Volte a Praticar Esportes <span class="cnt">25</span></div>
+        <div class="hl">Prótese para Corrida e Esporte <span class="cnt">30</span></div>
+        <div class="hl">Avaliação 100% Gratuita <span class="cnt">23</span></div>
+        <div class="hl">Ullis: Próteses Esportivas SC <span class="cnt">28</span></div>
+        <div class="hl">Fale pelo WhatsApp Agora <span class="cnt">24</span></div>
+        <div class="hl">Carbon Fiber Sob Medida SC <span class="cnt">26</span></div>
+        <div class="hl">Agende Sua Avaliação Grátis <span class="cnt">27</span></div>
+      </div>
+      <h3>Descrições RSA</h3>
+      <div class="desc">Próteses esportivas de alta performance, incluindo lâminas de carbono. Avaliação gratuita em SC.</div>
+      <div class="desc">Volte a correr, pular e competir com a prótese esportiva ideal. Fale pelo WhatsApp!</div>
+      <div class="desc">Fabricamos próteses esportivas para atletas amputados em SC. 40 anos de experiência.</div>
+      <div class="desc">Da corrida ao futebol — próteses esportivas personalizadas para cada modalidade. Avalie grátis.</div>
+    </div>
+
+    <!-- G06 -->
+    <div class="card">
+      <h2>Grupo 06 — Prótese Infantil <span class="badge">PRÓTESES</span></h2>
+      <h3>Palavras-chave</h3>
+      <div class="kw-list">
+        <span class="kw exact">[prótese infantil]</span>
+        <span class="kw exact">[prótese pediátrica]</span>
+        <span class="kw phrase">"prótese para criança"</span>
+        <span class="kw phrase">"prótese bebê amputado"</span>
+        <span class="kw broad">amputado infantil prótese SC</span>
+      </div>
+      <h3>Títulos RSA</h3>
+      <div class="hl-grid">
+        <div class="hl">Prótese Infantil em SC <span class="cnt">22</span></div>
+        <div class="hl">Prótese Pediátrica Sob Medida <span class="cnt">29</span></div>
+        <div class="hl">Para Crianças e Adolescentes <span class="cnt">28</span></div>
+        <div class="hl">Avaliação 100% Gratuita <span class="cnt">23</span></div>
+        <div class="hl">Cuidado Especial p/ Crianças <span class="cnt">27</span></div>
+        <div class="hl">Ullis: 40 Anos Transformando <span class="cnt">28</span></div>
+        <div class="hl">Fale pelo WhatsApp Agora <span class="cnt">24</span></div>
+        <div class="hl">Próteses Coloridas e Funcionais <span class="cnt">31 ⚠️</span></div>
+        <div class="hl warn">Próteses Coloridas Infantis <span class="cnt">27</span></div>
+      </div>
+      <h3>Descrições RSA</h3>
+      <div class="desc">Próteses pediátricas personalizadas, desenvolvidas para o crescimento da criança. Avaliação gratuita.</div>
+      <div class="desc">Fabricamos próteses infantis coloridas e funcionais em SC. Fale conosco pelo WhatsApp!</div>
+      <div class="desc">Atendemos crianças e adolescentes com próteses de alta qualidade. 40 anos de experiência em SC.</div>
+      <div class="desc">Cuidado humanizado e técnica especializada em próteses infantis. Avalie gratuitamente.</div>
+    </div>
+
+    <!-- G07 -->
+    <div class="card">
+      <h2>Grupo 07 — Órteses Geral <span class="badge">ÓRTESES</span></h2>
+      <h3>Palavras-chave</h3>
+      <div class="kw-list">
+        <span class="kw exact">[órtese ortopédica]</span>
+        <span class="kw exact">[órtese sob medida]</span>
+        <span class="kw phrase">"fazer órtese personalizada"</span>
+        <span class="kw phrase">"clínica de órtese SC"</span>
+        <span class="kw phrase">"ortesista santa catarina"</span>
+        <span class="kw broad">órtese personalizada fabricar SC</span>
+      </div>
+      <h3>Títulos RSA</h3>
+      <div class="hl-grid">
+        <div class="hl">Órteses Personalizadas SC <span class="cnt">24</span></div>
+        <div class="hl">Órtese Sob Medida em SC <span class="cnt">23</span></div>
+        <div class="hl">Avaliação 100% Gratuita <span class="cnt">23</span></div>
+        <div class="hl">Referência em Órteses SC <span class="cnt">23</span></div>
+        <div class="hl">40 Anos em Ortopedia Técnica <span class="cnt">28</span></div>
+        <div class="hl">Fale pelo WhatsApp Agora <span class="cnt">24</span></div>
+        <div class="hl">Fabricamos Sua Órtese <span class="cnt">21</span></div>
+        <div class="hl">Ullis Técnica Ortopédica <span class="cnt">24</span></div>
+        <div class="hl">Tecnologia e Conforto <span class="cnt">21</span></div>
+        <div class="hl">Agende Sua Avaliação Grátis <span class="cnt">27</span></div>
+      </div>
+      <h3>Descrições RSA</h3>
+      <div class="desc">Órteses personalizadas para coluna, membros inferiores e superiores. Avaliação gratuita em SC.</div>
+      <div class="desc">Fabricamos órteses sob medida com tecnologia e cuidado artesanal em SC. Fale pelo WhatsApp!</div>
+      <div class="desc">Há 40 anos fabricando órteses ortopédicas em SC. Agende sua avaliação gratuita agora.</div>
+      <div class="desc">Atendemos pelo plano de saúde. Equipe especializada em órteses ortopédicas desde 1986.</div>
+    </div>
+
+    <!-- G08 -->
+    <div class="card">
+      <h2>Grupo 08 — Órtese de Coluna <span class="badge">ÓRTESES</span></h2>
+      <h3>Palavras-chave</h3>
+      <div class="kw-list">
+        <span class="kw exact">[órtese de coluna]</span>
+        <span class="kw exact">[colete ortopédico]</span>
+        <span class="kw phrase">"colete para escoliose"</span>
+        <span class="kw phrase">"órtese lombar personalizada"</span>
+        <span class="kw phrase">"órtese torácica SC"</span>
+        <span class="kw broad">colete TLSO ortopédico SC</span>
+        <span class="kw broad">suporte coluna personalizado</span>
+      </div>
+      <h3>Títulos RSA</h3>
+      <div class="hl-grid">
+        <div class="hl">Órtese de Coluna Sob Medida <span class="cnt">27</span></div>
+        <div class="hl">Colete Ortopédico Personalizado <span class="cnt">30</span></div>
+        <div class="hl">Tratamento de Escoliose SC <span class="cnt">25</span></div>
+        <div class="hl">Avaliação 100% Gratuita <span class="cnt">23</span></div>
+        <div class="hl">Órtese Lombar e Torácica <span class="cnt">23</span></div>
+        <div class="hl">Ullis: Referência em Coluna <span class="cnt">25</span></div>
+        <div class="hl">Fale pelo WhatsApp Agora <span class="cnt">24</span></div>
+        <div class="hl">Coletes Ortopédicos SC <span class="cnt">21</span></div>
+        <div class="hl">Agende Sua Avaliação Grátis <span class="cnt">27</span></div>
+      </div>
+      <h3>Descrições RSA</h3>
+      <div class="desc">Coletes ortopédicos e órteses de coluna personalizados para cada paciente. Avaliação gratuita em SC.</div>
+      <div class="desc">Tratamos escoliose, cifose e desvios de coluna com órteses sob medida. Fale pelo WhatsApp!</div>
+      <div class="desc">Fabricamos órteses lombares e torácicas (TLSO) com tecnologia e conforto. Fale pelo WhatsApp!</div>
+      <div class="desc">Tem prescrição médica? Fabricamos sua órtese de coluna com agilidade. Avalie gratuitamente.</div>
+    </div>
+
+    <!-- G09 -->
+    <div class="card">
+      <h2>Grupo 09 — Órtese Membro Inferior <span class="badge">ÓRTESES</span></h2>
+      <h3>Palavras-chave</h3>
+      <div class="kw-list">
+        <span class="kw exact">[órtese tornozelo]</span>
+        <span class="kw exact">[AFO órtese]</span>
+        <span class="kw exact">[KAFO órtese]</span>
+        <span class="kw phrase">"órtese para pé personalizada"</span>
+        <span class="kw phrase">"órtese joelho personalizada"</span>
+        <span class="kw phrase">"palmilha ortopédica personalizada"</span>
+        <span class="kw broad">órtese perna tornozelo SC</span>
+      </div>
+      <h3>Títulos RSA</h3>
+      <div class="hl-grid">
+        <div class="hl">Órtese Membro Inferior SC <span class="cnt">24</span></div>
+        <div class="hl">AFO e KAFO Sob Medida <span class="cnt">21</span></div>
+        <div class="hl">Órtese de Tornozelo e Joelho <span class="cnt">27</span></div>
+        <div class="hl">Palmilha Ortopédica SC <span class="cnt">22</span></div>
+        <div class="hl">Avaliação 100% Gratuita <span class="cnt">23</span></div>
+        <div class="hl">Ullis: 40 Anos em Órteses <span class="cnt">24</span></div>
+        <div class="hl">Fale pelo WhatsApp Agora <span class="cnt">24</span></div>
+        <div class="hl">Fabricamos Órteses de MI <span class="cnt">23</span></div>
+        <div class="hl">Agende Sua Avaliação Grátis <span class="cnt">27</span></div>
+      </div>
+      <h3>Descrições RSA</h3>
+      <div class="desc">Órteses de membro inferior personalizadas: AFO, KAFO, tornozelo e joelho. Avaliação gratuita em SC.</div>
+      <div class="desc">Palmilhas e órteses plantares sob medida para cada paciente. Fale pelo WhatsApp!</div>
+      <div class="desc">Recupere sua mobilidade com a órtese de MI ideal. Fale conosco pelo WhatsApp agora!</div>
+      <div class="desc">Atendemos com ou sem plano de saúde. Equipe especializada em órteses de MI desde 1986.</div>
+    </div>
+
+    <!-- G10 -->
+    <div class="card">
+      <h2>Grupo 10 — Órtese Membro Superior <span class="badge">ÓRTESES</span></h2>
+      <h3>Palavras-chave</h3>
+      <div class="kw-list">
+        <span class="kw exact">[órtese punho]</span>
+        <span class="kw exact">[órtese membro superior]</span>
+        <span class="kw phrase">"órtese para braço personalizada"</span>
+        <span class="kw phrase">"órtese cotovelo SC"</span>
+        <span class="kw phrase">"órtese mão personalizada"</span>
+        <span class="kw broad">órtese MS braço punho SC</span>
+      </div>
+      <h3>Títulos RSA</h3>
+      <div class="hl-grid">
+        <div class="hl">Órtese Membro Superior SC <span class="cnt">24</span></div>
+        <div class="hl">Órtese de Punho e Cotovelo <span class="cnt">25</span></div>
+        <div class="hl">Órtese de Mão Sob Medida <span class="cnt">24</span></div>
+        <div class="hl">Avaliação 100% Gratuita <span class="cnt">23</span></div>
+        <div class="hl">Recupere Suas Funções <span class="cnt">21</span></div>
+        <div class="hl">Ullis: 40 Anos em Órteses <span class="cnt">24</span></div>
+        <div class="hl">Fale pelo WhatsApp Agora <span class="cnt">24</span></div>
+        <div class="hl">Fabricamos Órteses de MS <span class="cnt">23</span></div>
+        <div class="hl">Agende Sua Avaliação Grátis <span class="cnt">27</span></div>
+      </div>
+      <h3>Descrições RSA</h3>
+      <div class="desc">Órteses de membro superior personalizadas: punho, cotovelo e mão. Avaliação gratuita em SC.</div>
+      <div class="desc">Fabricamos órteses de MS sob medida para recuperação funcional. Fale pelo WhatsApp!</div>
+      <div class="desc">Recupere as funções do braço e mão com órteses de alta qualidade. 40 anos de experiência.</div>
+      <div class="desc">Tem prescrição? Fabricamos sua órtese de MS com agilidade. Avalie gratuitamente.</div>
+    </div>
+
+    <!-- G11 -->
+    <div class="card">
+      <h2>Grupo 11 — Avaliação Gratuita <span class="badge" style="background:#FBAE32">CONVERSÃO</span></h2>
+      <h3>Palavras-chave</h3>
+      <div class="kw-list">
+        <span class="kw exact">[avaliação ortopédica gratuita]</span>
+        <span class="kw phrase">"avaliação prótese gratuita"</span>
+        <span class="kw phrase">"avaliação órtese gratuita"</span>
+        <span class="kw phrase">"consulta protesista grátis"</span>
+        <span class="kw broad">consulta ortopédica grátis SC</span>
+        <span class="kw broad">avaliação ortopedia técnica grátis</span>
+      </div>
+      <h3>Títulos RSA</h3>
+      <div class="hl-grid">
+        <div class="hl">Avaliação 100% Gratuita <span class="cnt">23</span></div>
+        <div class="hl">Sem Custo na 1ª Consulta <span class="cnt">23</span></div>
+        <div class="hl">Avalie Sua Prótese ou Órtese <span class="cnt">29</span></div>
+        <div class="hl">Ullis Técnica Ortopédica <span class="cnt">24</span></div>
+        <div class="hl">Agende pelo WhatsApp Agora <span class="cnt">26</span></div>
+        <div class="hl">40 Anos de Experiência em SC <span class="cnt">27</span></div>
+        <div class="hl">Avaliação Sem Compromisso <span class="cnt">25</span></div>
+        <div class="hl">Diagnóstico Gratuito em SC <span class="cnt">25</span></div>
+        <div class="hl">Fale pelo WhatsApp Agora <span class="cnt">24</span></div>
+        <div class="hl">Equipe Especializada SC <span class="cnt">22</span></div>
+      </div>
+      <h3>Descrições RSA</h3>
+      <div class="desc">Avaliação 100% gratuita para próteses e órteses. Sem compromisso. Agende pelo WhatsApp agora!</div>
+      <div class="desc">Nossa equipe avalia seu caso gratuitamente. 40 anos de experiência em ortopedia técnica em SC.</div>
+      <div class="desc">Venha com ou sem prescrição. Avaliação gratuita em 4 unidades em Santa Catarina.</div>
+      <div class="desc">Atendimento humanizado desde a avaliação. Fale conosco pelo WhatsApp e agende grátis.</div>
+    </div>
+
+    <!-- G12 -->
+    <div class="card">
+      <h2>Grupo 12 — Técnico Ortopédico / Reabilitação <span class="badge">GERAL</span></h2>
+      <h3>Palavras-chave</h3>
+      <div class="kw-list">
+        <span class="kw exact">[técnico em ortopedia SC]</span>
+        <span class="kw phrase">"protesista SC"</span>
+        <span class="kw phrase">"ortesista florianópolis"</span>
+        <span class="kw phrase">"reabilitação pós amputação"</span>
+        <span class="kw broad">técnico ortopédico santa catarina</span>
+        <span class="kw broad">reabilitação ortopédica SC clínica</span>
+      </div>
+      <h3>Títulos RSA</h3>
+      <div class="hl-grid">
+        <div class="hl">Técnico Ortopédico em SC <span class="cnt">23</span></div>
+        <div class="hl">Protesista e Ortesista SC <span class="cnt">24</span></div>
+        <div class="hl">Reabilitação Pós-Amputação <span class="cnt">26</span></div>
+        <div class="hl">Avaliação 100% Gratuita <span class="cnt">23</span></div>
+        <div class="hl">Ullis Técnica Ortopédica <span class="cnt">24</span></div>
+        <div class="hl">40 Anos Transformando Vidas <span class="cnt">26</span></div>
+        <div class="hl">Fale pelo WhatsApp Agora <span class="cnt">24</span></div>
+        <div class="hl">Equipe Especializada em SC <span class="cnt">25</span></div>
+        <div class="hl">Agende Sua Avaliação Grátis <span class="cnt">27</span></div>
+      </div>
+      <h3>Descrições RSA</h3>
+      <div class="desc">Equipe de protesistas e ortesistas especializados em SC. Avaliação gratuita pelo WhatsApp.</div>
+      <div class="desc">Reabilitação pós-amputação com próteses e órteses sob medida. 40 anos de experiência em SC.</div>
+      <div class="desc">Técnicos ortopédicos certificados há 40 anos em Santa Catarina. Fale conosco agora!</div>
+      <div class="desc">Da avaliação à entrega: acompanhamos cada etapa da sua reabilitação. Avaliação gratuita.</div>
+    </div>
+  </section>
+
+  <!-- ─── RECOMENDAÇÕES ──────────────────── -->
+  <section id="recomendacoes">
+    <h1>5. Recomendações e Próximos Passos</h1>
+
+    <h3>Distribuição de budget sugerida (início)</h3>
+    <table>
+      <tr><th>Grupo</th><th>Prioridade</th><th>% Sugerido</th></tr>
+      <tr><td>Avaliação Gratuita (G11)</td><td class="pri-high">Alta</td><td>20%</td></tr>
+      <tr><td>Prótese Membro Inferior (G03)</td><td class="pri-high">Alta</td><td>18%</td></tr>
+      <tr><td>Órtese Coluna (G08)</td><td class="pri-high">Alta</td><td>15%</td></tr>
+      <tr><td>Marca Ullis (G01)</td><td class="pri-high">Alta</td><td>12%</td></tr>
+      <tr><td>Próteses Geral (G02)</td><td class="pri-med">Média</td><td>10%</td></tr>
+      <tr><td>Órteses MI (G09)</td><td class="pri-med">Média</td><td>10%</td></tr>
+      <tr><td>Próteses MS (G04)</td><td class="pri-med">Média</td><td>7%</td></tr>
+      <tr><td>Demais grupos (G05–G10, G12)</td><td class="pri-low">Baixa</td><td>8%</td></tr>
+    </table>
+
+    <div class="card" style="margin-top:20px;border-left:4px solid #1C8292">
+      <h3 style="margin-top:0">Checklist dos primeiros 30 dias</h3>
+      <p style="margin:6px 0">☐ Configurar rastreamento de conversão (clique no botão WhatsApp) via Google Tag Manager</p>
+      <p style="margin:6px 0">☐ Substituir XXXXXXXX pelo número real do WhatsApp em todas as URLs</p>
+      <p style="margin:6px 0">☐ Ativar lance "Maximizar cliques" com CPC máximo de R$8,00</p>
+      <p style="margin:6px 0">☐ Publicar campanha e monitorar primeiros 7 dias</p>
+      <p style="margin:6px 0">☐ Pausar palavras-chave com +50 impressões e 0 cliques após 14 dias</p>
+      <p style="margin:6px 0">☐ Adicionar novas negativas com base nos Termos de Pesquisa reais</p>
+      <p style="margin:6px 0">☐ Após 30 conversões: migrar para CPA alvo</p>
+    </div>
+
+    <div class="card" style="margin-top:12px;border-left:4px solid #FBAE32">
+      <h3 style="margin-top:0">UTMs para rastreamento</h3>
+      <div class="url">utm_source=google&utm_medium=cpc&utm_campaign=ullis-sc&utm_content={adgroupid}&utm_term={keyword}</div>
+    </div>
+  </section>
+
+  <p style="text-align:center;color:#aaa;font-size:.75rem;margin-top:40px;padding-bottom:40px">Ullis Técnica Ortopédica · Campanha Google Ads · Gerado em julho/2026</p>
+</div>
+</body>
+</html>
