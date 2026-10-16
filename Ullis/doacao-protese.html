@@ -33,20 +33,21 @@
   .upload-area input{display:none}
   .hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--bd);border-radius:100px;padding:6px 14px 6px 8px;font-size:.78rem;font-family:'Prompt',sans-serif;font-weight:600;color:var(--tm);margin-bottom:24px}
   .hero-badge img{height:22px;border-radius:50%}
-  .info-stripxdisplay:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+  .info-stripydisplay:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
   .info-chip{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:100px;padding:7px 14px;font-size:.8rem;font-family:'Prompt',sans-serif;font-weight:500;color:#fff}
   .info-chip svg{width:14px;height:14px;flex-shrink:0}
   .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center;max-width:100%}
   @media(max-width:768px){
     .hero-inner{grid-template-columns:1fr}
     .hero-quote-card{display:none}
-    .info-stripxgap:8px}
+    .info-stripygap:8px}
     .info-chip{font-size:.75rem;padding:6px 10px}
   }
   @media(max-width:640px){.form-grid{grid-template-columns:1fr}.foto-grid{grid-template-columns:1fr!important}}
   </style>
 </head>
 <body>
+
 <nav class="nav" id="nav">
   <div class="nav__i">
     <a href="/" class="logo"><img src="img/logo.svg" alt="Ullis Técnica Ortopédica" height="30"></a>
@@ -64,6 +65,7 @@
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="page-hero page-hero--teal">
   <div class="wrap">
     <div class="page-hero__breadcrumb" style="color:rgba(255,255,255,.6)">
@@ -76,9 +78,18 @@
         <h1>Sua história<br><em>merece ser contada</em></h1>
         <p style="max-width:520px;margin-top:16px;font-size:1.05rem;color:rgba(255,255,255,.85)">Depois da primeira doação, que foi feita em parceria com Luciano Hang, agora a Ullis também vai fazer por conta própria. Se você não tem condições de adquirir uma prótese, preencha os dados e nos conte a sua história.</p>
         <div class="info-strip">
-          <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>100% gratuito</span>
-          <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14 "/></svg>Anɴlise em até 30 dias</span>
-          <span class="info-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Equipe especializada</span>
+          <span class="info-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            100% gratuito
+          </span>
+          <span class="info-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Análise em até 30 dias
+          </span>
+          <span class="info-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Equipe especializada
+          </span>
         </div>
       </div>
       <div class="hero-quote-card" data-r data-d="1" style="display:flex;justify-content:center;align-items:center">
@@ -92,16 +103,30 @@
   </div>
 </section>
 
+<!-- COMO FUNCIONA -->
 <section class="s-sm" style="background:var(--bg);border-bottom:1px solid var(--bd)">
   <div class="wrap">
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center" data-r>
-      <div style="padding:24px"><div style="width:52px;height:52px;background:var(--cl);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.6rem">📝</div><h3 style="margin-bottom:8px">1. Preencha</h3><p style="font-size:.875rem">Conta sua história e envie os dados solicitados no formulário abaixo.</p></div>
-      <div style="padding:24px"><div style="width:52px;height:52px;background:var(--cl);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.6rem">🔍</div><h3 style="margin-bottom:8px">2. Analisamos</h3><p style="font-size:.875rem">Nossa equipe avalia cada candidatura com cuidado e atenção individual.</p></div>
-      <div style="padding:24px"><div style="width:52px;height:52px;background:var(--cl);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.6rem">🦾</div><h3 style="margin-bottom:8px">3. Transformamos</h3><p style="font-size:.875rem">Os selecionados recebem uma prótese de qualidade e acompanhamento profissional.</p></div>
+      <div style="padding:24px">
+        <div style="width:52px;height:52px;background:var(--cl);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.6rem">📝</div>
+        <h3 style="margin-bottom:8px">1. Preencha</h3>
+        <p style="font-size:.875rem">Conta sua história e envie os dados solicitados no formulário abaixo.</p>
+      </div>
+      <div style="padding:24px">
+        <div style="width:52px;height:52px;background:var(--cl);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.6rem">🔍</div>
+        <h3 style="margin-bottom:8px">2. Analisamos</h3>
+        <p style="font-size:.875rem">Nossa equipe avalia cada candidatura com cuidado e atenção individual.</p>
+      </div>
+      <div style="padding:24px">
+        <div style="width:52px;height:52px;background:var(--cl);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.6rem">🦾</div>
+        <h3 style="margin-bottom:8px">3. Transformamos</h3>
+        <p style="font-size:.875rem">Os selecionados recebem uma prótese de qualidade e acompanhamento profissional.</p>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- PRIMEIRA DOAÇÃO -->
 <section class="s" style="background:#fff">
   <div class="wrap">
     <div style="text-align:center;margin-bottom:40px" data-r>
@@ -110,12 +135,17 @@
       <p style="max-width:540px;margin:12px auto 0">Em parceria com Luciano Hang, entregamos nossa primeira prótese. Esse momento nos mostrou o impacto real que podemos ter — e nos motivou a continuar.</p>
     </div>
     <div class="foto-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:0 auto" data-r>
-      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08)"><img src="img/protese-doacao-1.jpg" alt="Primeira prótese doada pela Ullis em parceria com Luciano Hang" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08)"><img src="img/protese-doacao-2.jpg" alt="Beneficiário com a prótese doada pela Ullis" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08)">
+        <img src="img/protese-doacao-1.jpg" alt="Primeira prótese doada pela Ullis em parceria com Luciano Hang" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08)">
+        <img src="img/protese-doacao-2.jpg" alt="Beneficiário com a prótese doada pela Ullis" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
     </div>
   </div>
 </section>
 
+<!-- FORMULÁRIO -->
 <section class="s form-section" id="formulario">
   <div class="wrap">
     <div style="text-align:center;margin-bottom:40px" data-r>
@@ -123,35 +153,117 @@
       <h2>Preencha o formulário</h2>
       <p style="max-width:520px;margin:12px auto 0">Todos os campos são importantes para avaliarmos sua candidatura. Seja honesto e detalhado ao contar sua história.</p>
     </div>
+
     <form id="doacao-form" onsubmit="sendDoacaoToWhatsApp(event)" class="form-card" data-r>
       <div class="form-grid">
-        <div class="form-group full"><label for="nome">Nome completo *</label><input type="text" id="nome" name="nome" placeholder="Seu nome completo" required></div>
-        <div class="form-group"><label for="tel">Telefone / WhatsApp *</label><input type="tel" id="tel" name="tel" placeholder="(48) 99999-9999" required></div>
-        <div class="form-group"><label for="email">E-mail</label><input type="email" id="email" name="email" placeholder="seu@email.com"></div>
-        <div class="form-group full"><label for="redes">Redes sociais</label><input type="text" id="redes" name="redes" placeholder="@instagram, facebook.com/perfil, TikTok…"><span class="hint">Opcional — ajuda a conhecer melhor sua história.</span></div>
-        <div class="form-group full"><label for="amputacao">Data da amputação ou condição de nascença *</label><input type="text" id="amputacao" name="amputacao" placeholder="Ex: amputação em 03/2018 por acidente; ou condição de nascença" required></div>
-        <div class="form-group full"><label>Foto da amputação / membro *</label><label class="upload-area" for="foto-input"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><p id="foto-label">Clique para selecionar uma foto (JPG, PNG • máx. 10 MB)</p><input type="file" id="foto-input" accept="image/*" onchange="updateLabel('foto-input','foto-label')"></label><span class="hint">Após clicar em "Enviar pelo WhatsApp", envie a foto diretamente na conversa do WhatsApp.</span></div>
-        <div class="form-group full"><label>Vɴdeo de até 1 minuto</label><label class="upload-area" for="video-input"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg><p id="video-label">Clique para selecionar um vɴdeo (MP4, MOV • máx. 60 MB)</p><input type="file" id="video-input" accept="video/*" onchange="updateLabel('video-input','video-label')"></label><span class="hint">Um breve video se apresentando e contando sua história. Envie na conversa do WhatsApp após o envio.</span></div>
-        <div class="form-group full"><label>Documento médico ou comprovação *</label><label class="upload-area" for="doc-input"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg><p id="doc-label">Clique para selecionar um documento (PDF, JPG • máx. 10 MB)</p><input type="file" id="doc-input" accept=".pdf,image/*" onchange="updateLabel('doc-input','doc-label')"></label><span class="hint">Laudo médico, receita, alta hospitalar ou qualquer documento que comprove sua condição. Envie na conversa do WhatsApp após o envio.</span></div>
-        <div class="form-group full"><label for="historia">Sua história *</label><textarea id="historia" name="historia" rows="6" required placeholder="Conte-nos como a falta de uma prótese afeta sua vida, seus sonhos e o que você espera alcançar com esse apoio. Seja sincero — sua história importa para nós."></textarea></div>
+
+        <!-- Nome completo -->
+        <div class="form-group full">
+          <label for="nome">Nome completo *</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+        </div>
+
+        <!-- Telefone -->
+        <div class="form-group">
+          <label for="tel">Telefone / WhatsApp *</label>
+          <input type="tel" id="tel" name="tel" placeholder="(48) 99999-9999" required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com">
+        </div>
+
+        <!-- Redes sociais -->
+        <div class="form-group full">
+          <label for="redes">Redes sociais</label>
+          <input type="text" id="redes" name="redes" placeholder="@instagram, facebook.com/perfil, TikTok…">
+          <span class="hint">Opcional — nos ajuda a conhecer melhor sua história.</span>
+        </div>
+
+        <!-- Data amputação / nascença -->
+        <div class="form-group full">
+          <label for="amputacao">Data da amputação ou condição de nascença *</label>
+          <input type="text" id="amputacao" name="amputacao" placeholder="Ex: amputação em 03/2018 por acidente; ou condição de nascença (anemia falciforme, má-formação…)" required>
+        </div>
+
+        <!-- Foto da amputação -->
+        <div class="form-group full">
+          <label>Foto da amputação / membro *</label>
+          <label class="upload-area" for="foto-input">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <p id="foto-label">Clique para selecionar uma foto (JPG, PNG • máx. 10 MB)</p>
+            <input type="file" id="foto-input" accept="image/*" onchange="updateLabel('foto-input','foto-label')">
+          </label>
+          <span class="hint">Após clicar em "Enviar pelo WhatsApp", envie a foto diretamente na conversa do WhatsApp.</span>
+        </div>
+
+        <!-- Vídeo -->
+        <div class="form-group full">
+          <label>Vídeo de até 1 minuto</label>
+          <label class="upload-area" for="video-input">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            <p id="video-label">Clique para selecionar um vídeo (MP4, MOV • máx. 60 MB)</p>
+            <input type="file" id="video-input" accept="video/*" onchange="updateLabel('video-input','video-label')">
+          </label>
+          <span class="hint">Um breve vídeo se apresentando e contando sua história. Envie na conversa do WhatsApp após o envio.</span>
+        </div>
+
+        <!-- Documento médico -->
+        <div class="form-group full">
+          <label>Documento médico ou comprovação *</label>
+          <label class="upload-area" for="doc-input">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <p id="doc-label">Clique para selecionar um documento (PDF, JPG • máx. 10 MB)</p>
+            <input type="file" id="doc-input" accept=".pdf,image/*" onchange="updateLabel('doc-input','doc-label')">
+          </label>
+          <span class="hint">Laudo médico, receita, alta hospitalar ou qualquer documento que comprove sua condição. Envie na conversa do WhatsApp após o envio.</span>
+        </div>
+
+        <!-- História pessoal -->
+        <div class="form-group full">
+          <label for="historia">Sua história *</label>
+          <textarea id="historia" name="historia" rows="6" placeholder="Conte-nos como a falta de uma prótese afeta sua vida, seus sonhos e o que você espera alcançar com esse apoio. Seja sincero — sua história importa para nós." required></textarea>
+        </div>
+
       </div>
-      <div style="margin-top:8px;padding:16px;background:var(--cl);border-radius:10px;font-size:.82rem;color:var(--c);line-height:1.6"><strong>📎 Lembrete:</strong> Após clicar no botão abaixo, você será redirecionado para o WhatsApp. Envie também os arquivos (Foto, Vídeo, Documento) diretamente na conversa.</div>
-      <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap"><button type="submit" class="btn btn-teal" style="flex:1;justify-content:center;padding:15px 28px;font-size:.95rem"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.122 1.528 5.855L0 24l6.335-1.652A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.019-1.377l-.36-.214-3.727.977.998-3.645-.235-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>Enviar pelo WhatsApp</button></div>
+
+      <div style="margin-top:8px;padding:16px;background:var(--cl);border-radius:10px;font-size:.82rem;color:var(--c);line-height:1.6">
+        <strong>📎 Lembrete:</strong> Após clicar no botão abaixo, você será redirecionado para o WhatsApp. Envie também os arquivos (foto, vídeo, documento) diretamente na conversa.
+      </div>
+
+      <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+        <button type="submit" class="btn btn-teal" style="flex:1;justify-content:center;padding:15px 28px;font-size:.95rem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.122 1.528 5.855L0 24l6.335-1.652A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.019-1.377l-.36-.214-3.727.977.998-3.645-.235-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+          Enviar pelo WhatsApp
+        </button>
+      </div>
     </form>
   </div>
 </section>
 
+<!-- CTA FINAL -->
 <section class="s" style="background:var(--bg);border-top:1px solid var(--bd)">
   <div class="wrap" style="text-align:center">
-    <div data-r><h2 style="max-width:540px;margin:0 auto 16px">Dúvidas? Fale com nossa equipe</h2>
+    <div data-r>
+      <h2 style="max-width:540px;margin:0 auto 16px">Dúvidas? Fale com nossa equipe</h2>
       <p style="max-width:480px;margin:0 auto 28px">Estamos disponíveis pelo WhatsApp para esclarecer qualquer questão sobre o processo de doação.</p>
-      <a href="https://wa.me/5548999670196?text=Olá%2C%20tenho%20uma%20dúvida%20sobre%20a%20doação%20de%20prótese" target="_blank" rel="noopener" class="btn btn-teal" style="display:inline-flex"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.122 1.528 5.855L0 24l6.335-1.652A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.019-1.377l-.36-.214-3.727.977.998-3.645-.235-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>Falar no WhatsApp</a></div>
+      <a href="https://wa.me/5548999670196?text=Olá%2C%20tenho%20uma%20dúvida%20sobre%20a%20doação%20de%20prótese" target="_blank" rel="noopener" class="btn btn-teal" style="display:inline-flex">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.122 1.528 5.855L0 24l6.335-1.652A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.019-1.377l-.36-.214-3.727.977.998-3.645-.235-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="wrap footer__main">
-    <div class="footer__col footer__col--brand"><a href="/" class="logo" style="margin-bottom:12px"><img src="img/logo.svg" alt="Ullis" height="28"></a><p>Especialistas em próteses e órteses ortopédicas desde 1986. 4 unidades em Santa Catarina.</p></div>
+    <div class="footer__col footer__col--brand">
+      <a href="/" class="logo" style="margin-bottom:12px"><img src="img/logo.svg" alt="Ullis" height="28"></a>
+      <p>Especialistas em próteses e órteses ortopédicas desde 1986. 4 unidades em Santa Catarina.</p>
+    </div>
     <div class="footer__col"><h5>Páginas</h5><ul><li><a href="/">Home</a></li><li><a href="/quem-somos">Quem somos</a></li><li><a href="/proteses">Próteses</a></li><li><a href="/orteses">Órteses</a></li><li><a href="/blog">Blog</a></li><li><a href="/avaliacao-gratuita">Avaliação Gratuita</a></li><li><a href="/doacao-protese">Doação de prótese</a></li></ul></div>
     <div class="footer__col"><h5>Unidades</h5><div class="footer__addrs"><div class="footer__addr"><strong>Florianópolis</strong><span>R. Henrique Boiteux, 153</span></div><div class="footer__addr"><strong>Criciúma</strong><span>R. Santo Antonio, 880</span></div><div class="footer__addr"><strong>Balneário Camboriú</strong><span>Av. do Estado, 1690</span></div><div class="footer__addr"><strong>Joinville</strong><span>Pedro Mayerle, 160</span></div></div></div>
     <div class="footer__col"><h5>Contato</h5><ul><li><a href="tel:+5548999670196">(48) 99967-0196</a></li><li><a href="https://wa.me/5548999670196" target="_blank">WhatsApp</a></li></ul></div>
@@ -159,7 +271,10 @@
   <div class="footer__bottom"><div class="wrap"><span>© 2025 Ullis Técnica Ortopédica. Todos os direitos reservados.</span></div></div>
 </footer>
 
-<a href="https://wa.me/5548999670196" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.122 1.528 5.855L0 24l6.335-1.652A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.019-1.377l-.36-.214-3.727.977.998-3.645-.235-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg><span>WhatsApp</span></a>
+<a href="https://wa.me/5548999670196" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.122 1.528 5.855L0 24l6.335-1.652A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.019-1.377l-.36-.214-3.727.977.998-3.645-.235-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/></svg>
+  <span>WhatsApp</span>
+</a>
 
 <script>
 const nav=document.getElementById('nav');
@@ -168,8 +283,46 @@ const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.targe
 document.querySelectorAll('[data-r]').forEach(el=>ro.observe(el));
 const burger=document.getElementById('burger');const links=document.querySelector('.nav__links');let open=false;
 burger.addEventListener('click',()=>{open=!open;links.style.cssText=open?'display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;padding:12px 16px 16px;border-bottom:1px solid #e5e7eb;gap:2px;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,.08)':''});
-function updateLabel(inputId,labelId){const input=document.getElementById(inputId);const label=document.getElementById(labelId);if(input.files&&input.files[0]){label.textContent='✓ '+input.files[0].name}}
-function sendDoacaoToWhatsApp(e){e.preventDefault();const nome=document.getElementById('nome').value.trim();const tel=document.getElementById('tel').value.trim();const email=document.getElementById('email').value.trim();const redes=document.getElementById('redes').value.trim();const amput=document.getElementById('amputacao').value.trim();const hist=document.getElementById('historia').value.trim();const fotoInput=document.getElementById('foto-input');const videoInput=document.getElementById('video-input');const docInput=document.getElementById('doc-input');const temFoto=fotoInput.files&&fotoInput.files[0];const temVideo=videoInput.files&&videoInput.files[0];const temDoc=docInput.files&&docInput.files[0];let texto=`Olá! Estou me candidatando à *doação de prótese* da Ullis.\n\n`;texto+=`*Nome:* ${nome}\n`;texto+=`*Telefone:* ${tel}\n`;if(email)texto+=`*E-mail:* ${email}\n`;if(redes)texto+=`*Redes sociais:* ${redes}\n`;texto+=`*Amputação / condição:* ${amput}\n\n`;texto+=`*Minha história:*\n${hist}\nn`;texto+=`---\n`;if(temFoto)texto+=`📸 Vou enviar a *foto* da amputação nesta conversa.\n`;if(temVideo)texto+=`🎥 Vou enviar o *vɴdeo* de apresentação nesta conversa.\n`;if(temDoc)texto+=b📄 Vou enviar o *documento médico* nesta conversa.\n`;window.open(`https://wa.me/5548999670196?text=${encodeURIComponent(texto)}`,'_blank')}
+
+function updateLabel(inputId, labelId) {
+  const input = document.getElementById(inputId);
+  const label = document.getElementById(labelId);
+  if (input.files && input.files[0]) {
+    label.textContent = '✓ ' + input.files[0].name;
+  }
+}
+
+function sendDoacaoToWhatsApp(e) {
+  e.preventDefault();
+  const nome    = document.getElementById('nome').value.trim();
+  const tel     = document.getElementById('tel').value.trim();
+  const email   = document.getElementById('email').value.trim();
+  const redes   = document.querySelector('#redes').value.trim();
+  const amput   = document.getElementById('amputacao').value.trim();
+  const hist    = document.getElementById('historia').value.trim();
+
+  const fotoInput = document.getElementById('foto-input');
+  const videoInput = document.getElementById('video-input');
+  const docInput = document.getElementById('doc-input');
+
+  const temFoto  = fotoInput.files && fotoInput.files[0];
+  const temVideo = videoInput.files && videoInput.files[0];
+  const temDoc   = docInput.files && docInput.files[0];
+
+  let texto = `Olá! Estou me candidatando à *doação de prótese* da Ullis.\n\n`;
+  texto += `*Nome:* ${nome}\n`;
+  texto += `*Telefone:* ${tel}\n`;
+  if (email) texto += `*E-mail:* ${email}\n`;
+  if (redes) texto += `*Redes sociais:* ${redes}\n`;
+  texto += `*Amputação / condição:* ${amput}\n\n`;
+  texto += `*Minha história:*\n${hist}\n\n`;
+  texto += `---\n`;
+  if (temFoto)  texto += `📸 Vou enviar a *foto* da amputação nesta conversa.\n`;
+  if (temVideo) texto += `🎥 Vou enviar o *vídeo* de apresentação nesta conversa.\n`;
+  if (temDoc)   texto += `📄 Vou enviar o *documento médico* nesta conversa.\n`;
+
+  window.open(`https://wa.me/5548999670196?text=${encodeURIComponent(texto)}`, '_blank');
+}
 </script>
 </body>
 </html>
