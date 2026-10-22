@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PT29QJKT');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Doação de Prótese | Ullis Técnica Ortopédica</title>
   <meta name="description" content="A Ullis doa próteses para quem não tem condições de adquirir. Depois da primeira doação em parceria com Luciano Hang, agora a Ullis também vai fazer por conta própria.">
@@ -50,6 +57,9 @@
   </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT29QJKT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <nav class="nav" id="nav">
   <div class="nav__i">
@@ -290,6 +300,8 @@ function sendDoacaoToWhatsApp(e) {
   texto += `📄 Documento médico ou comprovação\n`;
   texto += `🎥 Vídeo de até 1 minuto (opcional)\n`;
 
+  // Analytics: só o evento, sem dados pessoais
+  (window.dataLayer = window.dataLayer || []).push({event: 'lead_doacao'});
   window.open(`https://wa.me/5548999670196?text=${encodeURIComponent(texto)}`, '_blank');
 }
 </script>
