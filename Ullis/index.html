@@ -425,8 +425,9 @@ p{font-size:1rem;line-height:1.78;color:var(--tm)}
 /* ─── RESPONSIVE ──────────────────────────── */
 @media(max-width:1024px){
   .hero{grid-template-columns:1fr;min-height:auto}
-  .hero__right{display:none}
-  .hero__left{max-width:100%;padding:80px clamp(16px,3vw,40px)}
+  .hero__right{order:-1;padding:20px clamp(16px,3vw,40px) 0}
+  .hero__right video{width:100%;max-width:none;height:42svh;min-height:240px;aspect-ratio:auto;object-position:center 66%;transform:none!important}
+  .hero__left{max-width:100%;padding:36px clamp(16px,3vw,40px) 64px}
   .hero__lead{max-width:100%}
   .service-row,.service-row--rev{grid-template-columns:1fr;direction:ltr}
   .service-img{aspect-ratio:16/7}
@@ -504,7 +505,7 @@ p{font-size:1rem;line-height:1.78;color:var(--tm)}
   </div>
   <!-- HERO IMAGE -->
   <div class="hero__right" aria-hidden="true">
-    <video id="heroImg" data-src="img/ullis-hero-protese.mp4" poster="img/ullis-hero-protese-poster.jpg" autoplay muted loop playsinline preload="none" width="720" height="1280"></video>
+    <video id="heroImg" data-src="img/ullis-hero-protese.mp4" data-src-mobile="img/ullis-hero-protese-mobile.mp4" poster="img/ullis-hero-protese-poster.jpg" autoplay muted loop playsinline preload="none" width="720" height="1280"></video>
   </div>
 </section>
 
@@ -899,10 +900,10 @@ burger.addEventListener('click',()=>{
 (function(){
   const img=document.getElementById('heroImg');
   if(!img)return;
-  // Vídeo da capa: só baixa em telas onde a coluna aparece (no celular ela fica oculta)
-  if(img.tagName==='VIDEO'&&matchMedia('(min-width:1025px)').matches){
-    img.src=img.dataset.src;
+  // Vídeo da capa: versão mais leve em telas pequenas (celular/tablet)
+  if(img.tagName==='VIDEO'){
     if(matchMedia('(prefers-reduced-motion: reduce)').matches)img.removeAttribute('autoplay');
+    img.src=matchMedia('(min-width:1025px)').matches?img.dataset.src:img.dataset.srcMobile;
   }
   let ticking=false;
   window.addEventListener('scroll',()=>{
