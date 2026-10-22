@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nossas Unidades | Ullis Técnica Ortopédica em SC</title>
-  <meta name="description" content="4 unidades em Santa Catarina: Florianópolis, Criciúma, Balneário Camboriú e Joinville. Encontre a unidade Ullis mais próxima e agende sua avaliação gratuita.">
+  <meta name="description" content="Unidades próprias em Florianópolis, Criciúma e Balneário Camboriú, e atendimento em clínicas parceiras em Joinville, Curitiba, Tubarão e Brusque. Agende sua avaliação gratuita.">
   <link rel="canonical" href="https://ullis.com.br/unidades">
-  <meta name="keywords" content="Ullis Florianópolis, Ullis Criciúma, Ullis Balneário Camboriú, Ullis Joinville, prótese Santa Catarina, clínica ortopédica SC">
+  <meta name="keywords" content="Ullis Florianópolis, Ullis Criciúma, Ullis Balneário Camboriú, prótese Joinville, prótese Curitiba, prótese Tubarão, prótese Brusque, prótese Santa Catarina, clínica ortopédica SC">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,600;0,700;0,800;1,700&family=Inter:wght@400;500&family=Fraunces:ital,opsz,wght@1,9..144,700&display=swap" rel="stylesheet">
@@ -14,8 +14,7 @@
   {"@context":"https://schema.org","@type":"MedicalBusiness","name":"Ullis Técnica Ortopédica","url":"https://ullis.com.br","telephone":"(48) 99967-0196","location":[
     {"@type":"Place","name":"Ullis Florianópolis","address":{"@type":"PostalAddress","streetAddress":"Rua Henrique Boiteux, 153","addressLocality":"Florianópolis","addressRegion":"SC","addressCountry":"BR"}},
     {"@type":"Place","name":"Ullis Criciúma","address":{"@type":"PostalAddress","streetAddress":"Rua Santo Antonio, 880","addressLocality":"Criciúma","addressRegion":"SC","addressCountry":"BR"}},
-    {"@type":"Place","name":"Ullis Balneário Camboriú","address":{"@type":"PostalAddress","streetAddress":"Avenida do Estado, 1690","addressLocality":"Balneário Camboriú","addressRegion":"SC","addressCountry":"BR"}},
-    {"@type":"Place","name":"Ullis Joinville","address":{"@type":"PostalAddress","streetAddress":"Pedro Mayerle, 160","addressLocality":"Joinville","addressRegion":"SC","addressCountry":"BR"}}
+    {"@type":"Place","name":"Ullis Balneário Camboriú","address":{"@type":"PostalAddress","streetAddress":"Avenida do Estado, 1690","addressLocality":"Balneário Camboriú","addressRegion":"SC","addressCountry":"BR"}}
   ]}
   </script>
   <style>
@@ -61,7 +60,7 @@
   .unit-actions{display:flex;gap:10px;flex-wrap:wrap}
 
   /* Grid todos as unidades */
-  .all-units{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .all-units{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
   .mini-card{border:1px solid var(--bd);border-radius:var(--r);padding:20px;transition:border-color var(--tr),box-shadow var(--tr),transform var(--tr);cursor:pointer}
   .mini-card:hover,.mini-card.active{border-color:var(--c);box-shadow:0 4px 16px rgba(28,130,146,.1);transform:translateY(-2px)}
   .mini-card.active{background:var(--cl)}
@@ -69,8 +68,21 @@
   .mini-card__addr{font-size:.78rem;color:var(--tm);line-height:1.5;margin-bottom:12px}
   .mini-card__link{font-size:.76rem;font-family:'Prompt',sans-serif;font-weight:600;color:var(--c);display:inline-flex;align-items:center;gap:4px}
 
-  @media(max-width:1024px){.unit-detail.active{grid-template-columns:1fr}.all-units{grid-template-columns:1fr 1fr}}
-  @media(max-width:640px){.all-units{grid-template-columns:1fr 1fr}.unit-tabs{gap:6px}.unit-tab{font-size:.8rem;padding:8px 14px}}
+  .units-label{font-family:'Prompt',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--c);margin-bottom:14px}
+
+  /* Clínicas parceiras */
+  .partners{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+  .partner-card{display:flex;flex-direction:column;border:1px solid var(--bd);border-radius:var(--r);padding:22px;background:#fff;transition:border-color var(--tr),box-shadow var(--tr)}
+  .partner-card:hover{border-color:var(--c);box-shadow:0 4px 16px rgba(28,130,146,.1)}
+  .partner-card__city{font-family:'Prompt',sans-serif;font-size:1.05rem;font-weight:700;color:var(--t)}
+  .partner-card__uf{font-size:.72rem;font-weight:600;color:var(--tm);margin-left:4px}
+  .partner-card__name{font-family:'Prompt',sans-serif;font-size:.8rem;font-weight:600;color:var(--c);margin:4px 0 10px}
+  .partner-card__addr{font-size:.8rem;color:var(--tm);line-height:1.55;margin-bottom:18px;flex:1}
+  .partner-card__actions{display:flex;flex-direction:column;gap:8px}
+  .partner-card__actions .btn{font-size:.8rem;justify-content:center}
+
+  @media(max-width:1024px){.unit-detail.active{grid-template-columns:1fr}.all-units{grid-template-columns:1fr 1fr 1fr}.partners{grid-template-columns:1fr 1fr}}
+  @media(max-width:640px){.all-units{grid-template-columns:1fr}.partners{grid-template-columns:1fr}.unit-tabs{gap:6px}.unit-tab{font-size:.8rem;padding:8px 14px}}
   </style>
 </head>
 <body>
@@ -101,9 +113,9 @@
       <span>Unidades</span>
     </div>
     <div class="page-hero__inner" data-r>
-      <div class="eyebrow">4 unidades em SC</div>
+      <div class="eyebrow">3 unidades próprias · 4 clínicas parceiras</div>
       <h1>Perto de onde<br><em>você está</em></h1>
-      <p style="max-width:520px;margin-top:16px">Florianópolis, Criciúma, Balneário Camboriú e Joinville — atendemos todo o estado de Santa Catarina com a mesma qualidade e cuidado.</p>
+      <p style="max-width:560px;margin-top:16px">Unidades próprias em Florianópolis, Criciúma e Balneário Camboriú, e atendimento em clínicas parceiras em Joinville, Curitiba, Tubarão e Brusque — com a mesma qualidade e cuidado em todas elas.</p>
     </div>
   </div>
 </section>
@@ -111,6 +123,7 @@
 <!-- VISÃO GERAL -->
 <section class="s-sm" style="background:var(--bg);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)">
   <div class="wrap">
+    <div class="units-label">Unidades próprias</div>
     <div class="all-units">
       <div class="mini-card active" data-unit="florianopolis" data-r>
         <div style="width:32px;height:32px;border-radius:8px;background:var(--cl);display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:var(--c)">
@@ -136,14 +149,6 @@
         <div class="mini-card__addr">Av. do Estado, 1690<br>Sala D — Ariribá</div>
         <span class="mini-card__link">Ver detalhes →</span>
       </div>
-      <div class="mini-card" data-unit="joinville" data-r data-d="3">
-        <div style="width:32px;height:32px;border-radius:8px;background:var(--cl);display:flex;align-items:center;justify-content:center;margin-bottom:12px;color:var(--c)">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
-        </div>
-        <div class="mini-card__city">Joinville</div>
-        <div class="mini-card__addr">Pedro Mayerle, 160<br>Anita Garibaldi</div>
-        <span class="mini-card__link">Ver detalhes →</span>
-      </div>
     </div>
   </div>
 </section>
@@ -155,7 +160,6 @@
       <button class="unit-tab active" data-target="florianopolis">Florianópolis</button>
       <button class="unit-tab" data-target="criciuma">Criciúma</button>
       <button class="unit-tab" data-target="balneario">Balneário Camboriú</button>
-      <button class="unit-tab" data-target="joinville">Joinville</button>
     </div>
 
     <!-- FLORIANÓPOLIS -->
@@ -282,41 +286,52 @@
       </div>
     </div>
 
-    <!-- JOINVILLE -->
-    <div class="unit-detail" id="joinville">
-      <div>
-        <div class="unit-map">
-          <div class="unit-map__placeholder">
-            <div class="unit-map__placeholder-ico">📍</div>
-            <p>Joinville — Anita Garibaldi</p>
-            <a href="https://maps.google.com/?q=Pedro+Mayerle+160+Anita+Garibaldi+Joinville+SC" target="_blank" rel="noopener" class="btn btn-teal" style="margin-top:8px;font-size:.82rem">Abrir no Google Maps</a>
-          </div>
+  </div>
+</section>
+
+<!-- CLÍNICAS PARCEIRAS -->
+<section class="s" id="parceiras" style="background:var(--bg);border-top:1px solid var(--bd)">
+  <div class="wrap">
+    <div data-r>
+      <div class="eyebrow">Clínicas parceiras</div>
+      <h2>Atendimento também em<br><em>clínicas parceiras</em></h2>
+      <p style="max-width:560px;margin-top:12px">Nossa equipe atende em clínicas parceiras de Joinville, Curitiba, Tubarão e Brusque. O agendamento é feito direto com a Ullis, pelo WhatsApp.</p>
+    </div>
+    <div class="partners">
+      <div class="partner-card" data-r>
+        <div class="partner-card__city">Joinville<span class="partner-card__uf">SC</span></div>
+        <div class="partner-card__name">Clínica parceira</div>
+        <div class="partner-card__addr">R. Pedro Mayerle, 160<br>Anita Garibaldi</div>
+        <div class="partner-card__actions">
+          <a href="https://wa.me/5548999670196?text=Olá!%20Gostaria%20de%20agendar%20atendimento%20em%20Joinville." target="_blank" rel="noopener" class="btn btn-teal">Agendar em Joinville</a>
+          <a href="https://maps.google.com/?q=Pedro+Mayerle+160+Anita+Garibaldi+Joinville+SC" target="_blank" rel="noopener" class="btn btn-ghost">Como chegar →</a>
         </div>
       </div>
-      <div>
-        <div class="unit-badge">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
-          Norte de SC
+      <div class="partner-card" data-r data-d="1">
+        <div class="partner-card__city">Curitiba<span class="partner-card__uf">PR</span></div>
+        <div class="partner-card__name">Neuroadapt</div>
+        <div class="partner-card__addr">Av. Vicente Machado, 1746<br>Batel</div>
+        <div class="partner-card__actions">
+          <a href="https://wa.me/5548999670196?text=Olá!%20Gostaria%20de%20agendar%20atendimento%20em%20Curitiba." target="_blank" rel="noopener" class="btn btn-teal">Agendar em Curitiba</a>
+          <a href="https://maps.google.com/?q=Neuroadapt+Av+Vicente+Machado+1746+Batel+Curitiba+PR" target="_blank" rel="noopener" class="btn btn-ghost">Como chegar →</a>
         </div>
-        <h2>Joinville</h2>
-        <p style="margin-top:8px;margin-bottom:4px">Na maior cidade de Santa Catarina, atendendo o norte do estado e a região metropolitana de Joinville.</p>
-        <div class="unit-details-list">
-          <div class="unit-detail-row">
-            <div class="unit-detail-row__ico">📍</div>
-            <div><strong>Endereço</strong><span>Pedro Mayerle, 160 — Anita Garibaldi, Joinville — SC</span></div>
-          </div>
-          <div class="unit-detail-row">
-            <div class="unit-detail-row__ico">📞</div>
-            <div><strong>Telefone</strong><a href="tel:+5548999670196">(48) 99967-0196</a></div>
-          </div>
-          <div class="unit-detail-row">
-            <div class="unit-detail-row__ico">⏰</div>
-            <div><strong>Horário de atendimento</strong><span>Segunda a Sexta: 8h às 18h · Sábado: 8h às 12h</span></div>
-          </div>
+      </div>
+      <div class="partner-card" data-r data-d="2">
+        <div class="partner-card__city">Tubarão<span class="partner-card__uf">SC</span></div>
+        <div class="partner-card__name">Ser Vida Saúde Integrada</div>
+        <div class="partner-card__addr">R. Aldomar Cardoso, 64 — Salas 104/105<br>Passagem</div>
+        <div class="partner-card__actions">
+          <a href="https://wa.me/5548999670196?text=Olá!%20Gostaria%20de%20agendar%20atendimento%20em%20Tubarão." target="_blank" rel="noopener" class="btn btn-teal">Agendar em Tubarão</a>
+          <a href="https://maps.google.com/?q=Ser+Vida+Saude+Integrada+Rua+Aldomar+Cardoso+64+Passagem+Tubarao+SC" target="_blank" rel="noopener" class="btn btn-ghost">Como chegar →</a>
         </div>
-        <div class="unit-actions">
-          <a href="https://wa.me/5548999670196?text=Olá!%20Gostaria%20de%20agendar%20na%20unidade%20de%20Joinville." target="_blank" rel="noopener" class="btn btn-teal">Agendar nesta unidade</a>
-          <a href="https://maps.google.com/?q=Pedro+Mayerle+160+Anita+Garibaldi+Joinville+SC" target="_blank" rel="noopener" class="btn btn-ghost">Como chegar →</a>
+      </div>
+      <div class="partner-card" data-r data-d="3">
+        <div class="partner-card__city">Brusque<span class="partner-card__uf">SC</span></div>
+        <div class="partner-card__name">Fibra Fisio</div>
+        <div class="partner-card__addr">Av. Getúlio Vargas, 63 — Box 16<br>Centro</div>
+        <div class="partner-card__actions">
+          <a href="https://wa.me/5548999670196?text=Olá!%20Gostaria%20de%20agendar%20atendimento%20em%20Brusque." target="_blank" rel="noopener" class="btn btn-teal">Agendar em Brusque</a>
+          <a href="https://maps.google.com/?q=Fibra+Fisio+Av+Getulio+Vargas+63+Centro+Brusque+SC" target="_blank" rel="noopener" class="btn btn-ghost">Como chegar →</a>
         </div>
       </div>
     </div>
@@ -340,7 +355,7 @@
   <div class="footer__main">
     <div><div class="footer__brand-name"><img src="img/logo.svg" alt="Ullis" height="34" style="filter:brightness(0) invert(1)"></div><p class="brand-desc">Especialistas em próteses e órteses desde 1986. Transformando vidas em SC.</p><div class="soc"><a href="https://www.instagram.com/ullistecnicaortopedica/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a></div></div>
     <div class="footer__col"><h5>Páginas</h5><ul><li><a href="/">Home</a></li><li><a href="/quem-somos">Quem somos</a></li><li><a href="/proteses">Próteses</a></li><li><a href="/orteses">Órteses</a></li><li><a href="/blog">Blog</a></li><li><a href="/avaliacao-gratuita">Avaliação Gratuita</a></li></ul></div>
-    <div class="footer__col"><h5>Unidades</h5><div class="footer__addrs"><div class="footer__addr"><strong>Florianópolis</strong><span>R. Henrique Boiteux, 153</span></div><div class="footer__addr"><strong>Criciúma</strong><span>R. Santo Antonio, 880</span></div><div class="footer__addr"><strong>Balneário Camboriú</strong><span>Av. do Estado, 1690</span></div><div class="footer__addr"><strong>Joinville</strong><span>Pedro Mayerle, 160</span></div></div></div>
+    <div class="footer__col"><h5>Unidades</h5><div class="footer__addrs"><div class="footer__addr"><strong>Florianópolis</strong><span>R. Henrique Boiteux, 153</span></div><div class="footer__addr"><strong>Criciúma</strong><span>R. Santo Antonio, 880</span></div><div class="footer__addr"><strong>Balneário Camboriú</strong><span>Av. do Estado, 1690</span></div><div class="footer__addr"><strong>Clínicas parceiras</strong><span>Joinville · Curitiba · Tubarão · Brusque</span></div></div></div>
     <div class="footer__col"><h5>Contato</h5><ul><li><a href="tel:+5548999670196">(48) 99967-0196</a></li><li><a href="https://wa.me/5548999670196" target="_blank">WhatsApp</a></li></ul></div>
   </div>
   <div style="max-width:var(--max);margin:0 auto"><div class="footer__bar"><span>© 2024 Ullis Técnica Ortopédica</span><span>Desenvolvido com ♥ em Florianópolis</span></div></div>
