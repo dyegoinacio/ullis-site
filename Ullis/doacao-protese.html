@@ -33,14 +33,14 @@
   .upload-area input{display:none}
   .hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--bd);border-radius:100px;padding:6px 14px 6px 8px;font-size:.78rem;font-family:'Prompt',sans-serif;font-weight:600;color:var(--tm);margin-bottom:24px}
   .hero-badge img{height:22px;border-radius:50%}
-  .info-stripydisplay:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+  .info-strip{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
   .info-chip{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:100px;padding:7px 14px;font-size:.8rem;font-family:'Prompt',sans-serif;font-weight:500;color:#fff}
   .info-chip svg{width:14px;height:14px;flex-shrink:0}
   .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center;max-width:100%}
   @media(max-width:768px){
     .hero-inner{grid-template-columns:1fr}
     .hero-quote-card{display:none}
-    .info-stripygap:8px}
+    .info-strip{gap:8px}
     .info-chip{font-size:.75rem;padding:6px 10px}
   }
   @media(max-width:640px){.form-grid{grid-template-columns:1fr}.foto-grid{grid-template-columns:1fr!important}}
@@ -297,7 +297,7 @@ function sendDoacaoToWhatsApp(e) {
   const nome    = document.getElementById('nome').value.trim();
   const tel     = document.getElementById('tel').value.trim();
   const email   = document.getElementById('email').value.trim();
-  const redes   = document.querySelector('#redes').value.trim();
+  const redes   = document.getElementById('redes').value.trim();
   const amput   = document.getElementById('amputacao').value.trim();
   const hist    = document.getElementById('historia').value.trim();
 
