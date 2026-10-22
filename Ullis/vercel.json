@@ -7,5 +7,13 @@
     { "source": "/blog",              "destination": "/blog.html" },
     { "source": "/unidades",          "destination": "/unidades.html" },
     { "source": "/doacao-protese",    "destination": "/doacao-protese.html" }
+  ],
+  "headers": [
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800" }
+      ]
+    }
   ]
 }
