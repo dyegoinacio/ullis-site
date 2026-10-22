@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PT29QJKT');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Avaliação Gratuita | Ullis Técnica Ortopédica</title>
   <meta name="description" content="Agende sua avaliação gratuita com especialistas em próteses e órteses. Sem compromisso. Unidades em Florianópolis, Criciúma e Balneário Camboriú, e clínicas parceiras em Joinville, Curitiba, Tubarão e Brusque.">
@@ -54,6 +61,9 @@
   </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT29QJKT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <nav class="nav" id="nav">
   <div class="nav__i">
@@ -253,6 +263,8 @@ function sendToWhatsApp(e){
   texto+=`*Unidade:* ${cidade}\n`;
   texto+=`*Serviço:* ${servico}\n`;
   if(msg)texto+=`*Mensagem:* ${msg}\n`;
+  // Analytics: só unidade e serviço, sem dados pessoais
+  (window.dataLayer=window.dataLayer||[]).push({event:'lead_avaliacao',unidade:cidade,servico:servico});
   window.open(`https://wa.me/5548999670196?text=${encodeURIComponent(texto)}`,'_blank');
 }
 </script>
